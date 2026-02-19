@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Novimai — Acompañamos a empresas en su transformación digital con IA. Diagnóstico, roadmap y automatizaciones a medida." />
+  <title>Novimai — Libera tu tiempo. Impulsa tu negocio.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+
+  <!-- Burbujas flotantes de fondo -->
+  <div class="bubbles-container" aria-hidden="true">
+    <span class="bubble bubble--1"></span>
+    <span class="bubble bubble--2"></span>
+    <span class="bubble bubble--3"></span>
+    <span class="bubble bubble--4"></span>
+  </div>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-novi">Novi</span><span class="logo-mai">mai</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#como-funciona">Cómo funciona</a></li>
+        <li><a href="#ejemplos">Ejemplos</a></li>
+      </ul>
+
+      <a href="#contacto" class="btn btn-primary btn-nav">Agenda tu llamada</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+      <ul>
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#como-funciona">Cómo funciona</a></li>
+        <li><a href="#ejemplos">Ejemplos</a></li>
+      </ul>
+      <a href="#contacto" class="btn btn-primary">Agenda tu llamada gratuita</a>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg">
+      <div class="hero-blob hero-blob--1"></div>
+      <div class="hero-blob hero-blob--2"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <span class="eyebrow">
+          <i data-lucide="sparkles" class="icon-sm"></i>
+          Tu aliado en inteligencia artificial
+        </span>
+        <h1>
+          Libera tu tiempo.<br>
+          <span class="gradient-text animated-gradient">Impulsa tu negocio.</span>
+        </h1>
+        <p class="hero-sub">
+          Te acompañamos de forma cercana y personalizada para que descubras qué necesita tu empresa,
+          sin presiones, sin tecnicismos. Solo soluciones reales para que des el salto a la nueva era digital.
+        </p>
+        <div class="hero-ctas">
+          <a href="#contacto" class="btn btn-primary btn-lg">
+            Agenda tu llamada gratuita <span class="btn-arrow">→</span>
+          </a>
+          <a href="#como-funciona" class="btn btn-outline btn-lg">Descubre cómo</a>
+        </div>
+        <p class="hero-note">
+          Sin compromiso · 100% gratuita · 30 min que pueden cambiarlo todo
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PAIN POINTS ==================== -->
+  <section class="pain" id="problema">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">¿Te suena familiar?</span>
+        <h2>Los retos que frenan tu negocio</h2>
+        <p>Sabemos lo que es sentir que hay algo más, pero no saber exactamente cómo llegar hasta ahí.</p>
+      </div>
+
+      <div class="pain-grid">
+        <div class="pain-card reveal">
+          <div class="pain-icon">
+            <i data-lucide="help-circle"></i>
+          </div>
+          <h3>No sabes por dónde empezar</h3>
+          <p>Escuchas hablar de IA y automatización, pero nadie te explica qué necesita TU empresa concretamente.</p>
+        </div>
+
+        <div class="pain-card reveal">
+          <div class="pain-icon">
+            <i data-lucide="timer"></i>
+          </div>
+          <h3>Pierdes horas en tareas repetitivas</h3>
+          <p>Tu equipo dedica demasiado tiempo a procesos que podrían resolverse solos, restando energía a lo que realmente importa.</p>
+        </div>
+
+        <div class="pain-card reveal">
+          <div class="pain-icon">
+            <i data-lucide="brain"></i>
+          </div>
+          <h3>Incertidumbre tecnológica</h3>
+          <p>El miedo a equivocarte con una inversión que no entiendes frena tu crecimiento y el de tu negocio.</p>
+        </div>
+      </div>
+
+      <div class="pain-transition reveal">
+        <div class="pain-transition-line"></div>
+        <p>Para eso existe <strong>Novimai</strong>.</p>
+        <div class="pain-transition-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BENEFICIOS ==================== -->
+  <section class="benefits" id="beneficios">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag section-tag--amber">Lo que vas a conseguir</span>
+        <h2>Beneficios que <span class="gradient-text-amber">transforman</span> tu negocio</h2>
+        <p>No se trata solo de tecnología. Se trata de que tú y tu empresa deis un paso hacia adelante.</p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card reveal">
+          <div class="benefit-icon benefit-icon--amber">
+            <i data-lucide="clock"></i>
+          </div>
+          <h3>Recupera tu tiempo</h3>
+          <p>Automatiza las tareas que te roban horas cada semana y dedícate a lo que realmente importa.</p>
+        </div>
+
+        <div class="benefit-card reveal">
+          <div class="benefit-icon benefit-icon--amber">
+            <i data-lucide="trending-up"></i>
+          </div>
+          <h3>Da un salto de calidad</h3>
+          <p>Optimiza procesos para ofrecer un servicio más rápido, eficiente y profesional a tus clientes.</p>
+        </div>
+
+        <div class="benefit-card reveal">
+          <div class="benefit-icon benefit-icon--amber">
+            <i data-lucide="zap"></i>
+          </div>
+          <h3>Reduce costes reales</h3>
+          <p>Menos tiempo en tareas manuales significa menos gasto en recursos y más margen para crecer.</p>
+        </div>
+
+        <div class="benefit-card reveal">
+          <div class="benefit-icon benefit-icon--amber">
+            <i data-lucide="shield-check"></i>
+          </div>
+          <h3>Certificación ISO 9001</h3>
+          <p>Nuestro diagnóstico te permite solicitar el certificado de calidad, aumentando la confianza en tus clientes.</p>
+          <span class="badge-inline">Incluido en Asesoramiento Operativo</span>
+        </div>
+
+        <div class="benefit-card reveal">
+          <div class="benefit-icon benefit-icon--amber">
+            <i data-lucide="heart"></i>
+          </div>
+          <h3>Libera tu carga</h3>
+          <p>Deja de sentir que llevas todo el peso. Te ayudamos a delegar en la tecnología lo que no necesitas hacer tú.</p>
+        </div>
+
+        <div class="benefit-card reveal">
+          <div class="benefit-icon benefit-icon--amber">
+            <i data-lucide="target"></i>
+          </div>
+          <h3>Céntrate en lo importante</h3>
+          <p>Con los procesos optimizados, puedes enfocarte en estrategia, ventas y hacer crecer tu negocio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICIOS ==================== -->
+  <section class="services" id="servicios">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Nuestros servicios</span>
+        <h2>Un camino pensado <span class="gradient-text">para ti</span></h2>
+        <p>No vendemos paquetes genéricos. Primero entendemos tu negocio, luego te proponemos exactamente lo que necesitas.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Asesoramiento Operativo -->
+        <div class="service-card service-card--amber reveal">
+          <div class="service-badge service-badge--amber">Servicio principal</div>
+          <div class="service-icon service-icon--amber">
+            <i data-lucide="compass"></i>
+          </div>
+          <h3>Asesoramiento Operativo</h3>
+          <p>Tu diagnóstico personalizado. Analizamos a fondo los procesos de tu empresa, creamos un roadmap claro y te mostramos exactamente dónde puedes mejorar. Sin sorpresas, sin letra pequeña.</p>
+          <ul class="service-includes service-includes--amber">
+            <li><i data-lucide="check-circle-2"></i> Análisis completo de tus procesos actuales</li>
+            <li><i data-lucide="check-circle-2"></i> Roadmap personalizado con prioridades claras</li>
+            <li><i data-lucide="check-circle-2"></i> Identificación de puntos de mejora inmediatos</li>
+            <li><i data-lucide="check-circle-2"></i> Compatible con certificación ISO 9001</li>
+            <li><i data-lucide="check-circle-2"></i> Acompañamiento cercano durante todo el proceso</li>
+          </ul>
+          <a href="#contacto" class="btn btn-amber btn-service">Quiero mi Asesoramiento Operativo →</a>
+        </div>
+
+        <!-- Implementaciones -->
+        <div class="service-card service-card--secondary reveal">
+          <div class="service-badge service-badge--cyan">Paso siguiente</div>
+          <div class="service-icon service-icon--cyan">
+            <i data-lucide="settings-2"></i>
+          </div>
+          <h3>Implementaciones</h3>
+          <p>Una vez tengas tu Asesoramiento Operativo, tú decides qué automatizaciones implementar. Nosotros las desarrollamos y ponemos en marcha contigo, asegurándonos de que todo funciona a la perfección.</p>
+          <ul class="service-includes service-includes--cyan">
+            <li><i data-lucide="check-circle-2"></i> Desarrollo a medida según tu roadmap</li>
+            <li><i data-lucide="check-circle-2"></i> Integración con tus sistemas actuales</li>
+            <li><i data-lucide="check-circle-2"></i> Formación para tu equipo</li>
+            <li><i data-lucide="check-circle-2"></i> Soporte y ajustes post-implementación</li>
+          </ul>
+          <p class="service-note">
+            <i data-lucide="info"></i>
+            Solo disponible tras completar el Asesoramiento Operativo
+          </p>
+          <a href="#contacto" class="btn btn-outline btn-service">Háblame de esto →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FILOSOFÍA ==================== -->
+  <section class="philosophy" id="filosofia">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Nuestra filosofía</span>
+        <h2>No somos una empresa de IA <span class="gradient-text">más</span></h2>
+        <p>En Novimai creemos que la tecnología debe adaptarse a ti, no al revés. En un mundo tan cambiante como el de la inteligencia artificial, lo que necesitas es alguien de confianza a tu lado que te ayude a navegar sin perderte.</p>
+      </div>
+
+      <div class="philosophy-grid">
+        <div class="philosophy-card reveal">
+          <div class="philosophy-icon">
+            <i data-lucide="handshake"></i>
+          </div>
+          <h3>Acompañamiento 1 a 1</h3>
+          <p>No te vendemos un producto. Te guiamos en un proceso para que tú tomes las decisiones con toda la información.</p>
+        </div>
+
+        <div class="philosophy-card reveal">
+          <div class="philosophy-icon">
+            <i data-lucide="eye"></i>
+          </div>
+          <h3>Transparencia total</h3>
+          <p>Te explicamos todo en tu idioma, sin tecnicismos innecesarios. Queremos que entiendas cada paso que damos juntos.</p>
+        </div>
+
+        <div class="philosophy-card reveal">
+          <div class="philosophy-icon">
+            <i data-lucide="message-circle"></i>
+          </div>
+          <h3>Cercanía real</h3>
+          <p>Somos personas trabajando con personas. Tu éxito es nuestro éxito, y eso se nota en cada conversación.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CÓMO FUNCIONA ==================== -->
+  <section class="how-it-works" id="como-funciona">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Paso a paso</span>
+        <h2>¿Cómo <span class="gradient-text">funciona</span>?</h2>
+        <p>Un proceso sencillo, transparente y pensado para que te sientas cómodo en cada momento.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-track">
+          <div class="timeline-progress" id="timeline-progress"></div>
+        </div>
+
+        <div class="timeline-step reveal" data-step="1">
+          <div class="timeline-icon-wrap">
+            <div class="timeline-icon">
+              <i data-lucide="phone-call"></i>
+            </div>
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-number">01</span>
+            <h3>Agenda tu llamada</h3>
+            <p>Una conversación de 30 minutos donde nos conocemos, resolvemos tus dudas y analizamos si nuestros servicios son lo que tu empresa necesita. Sin compromiso.</p>
+          </div>
+        </div>
+
+        <div class="timeline-step reveal" data-step="2">
+          <div class="timeline-icon-wrap">
+            <div class="timeline-icon">
+              <i data-lucide="search"></i>
+            </div>
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-number">02</span>
+            <h3>Diagnóstico profundo</h3>
+            <p>Analizamos tus procesos, hablamos con tu equipo y entendemos cada detalle de cómo funciona tu negocio.</p>
+          </div>
+        </div>
+
+        <div class="timeline-step reveal" data-step="3">
+          <div class="timeline-icon-wrap">
+            <div class="timeline-icon">
+              <i data-lucide="map"></i>
+            </div>
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-number">03</span>
+            <h3>Tu Asesoramiento Operativo</h3>
+            <p>Te entregamos un roadmap claro con las oportunidades de mejora priorizadas y recomendaciones personalizadas.</p>
+          </div>
+        </div>
+
+        <div class="timeline-step reveal" data-step="4">
+          <div class="timeline-icon-wrap">
+            <div class="timeline-icon">
+              <i data-lucide="rocket"></i>
+            </div>
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-number">04</span>
+            <h3>Implementación a tu ritmo</h3>
+            <p>Tú decides qué automatizaciones poner en marcha. Nosotros las desarrollamos y te acompañamos paso a paso.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EJEMPLOS ==================== -->
+  <section class="examples" id="ejemplos">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Ejemplos reales</span>
+        <h2>¿Qué puedes <span class="gradient-text">automatizar</span>?</h2>
+        <p>Estas son solo algunas de las soluciones que hemos diseñado para empresas como la tuya.</p>
+      </div>
+
+      <div class="examples-grid">
+        <div class="example-card reveal">
+          <div class="example-card-top">
+            <div class="example-icon">
+              <i data-lucide="mail"></i>
+            </div>
+            <span class="example-tag">Atención al cliente</span>
+          </div>
+          <h3>Respuestas automáticas a clientes</h3>
+          <p>Responde emails y consultas de forma inteligente sin mover un dedo, 24/7.</p>
+          <button class="btn btn-demo" disabled>
+            <i data-lucide="play-circle"></i> Ver demo
+            <span class="demo-tooltip">Próximamente</span>
+          </button>
+        </div>
+
+        <div class="example-card reveal">
+          <div class="example-card-top">
+            <div class="example-icon">
+              <i data-lucide="bar-chart-2"></i>
+            </div>
+            <span class="example-tag">Productividad</span>
+          </div>
+          <h3>Generación de informes</h3>
+          <p>Crea informes y reportes automatizados con los datos de tu negocio al instante.</p>
+          <button class="btn btn-demo" disabled>
+            <i data-lucide="play-circle"></i> Ver demo
+            <span class="demo-tooltip">Próximamente</span>
+          </button>
+        </div>
+
+        <div class="example-card reveal">
+          <div class="example-card-top">
+            <div class="example-icon">
+              <i data-lucide="users"></i>
+            </div>
+            <span class="example-tag">Ventas</span>
+          </div>
+          <h3>Gestión de leads</h3>
+          <p>Captura, clasifica y hace seguimiento de clientes potenciales sin intervención manual.</p>
+          <button class="btn btn-demo" disabled>
+            <i data-lucide="play-circle"></i> Ver demo
+            <span class="demo-tooltip">Próximamente</span>
+          </button>
+        </div>
+
+        <div class="example-card reveal">
+          <div class="example-card-top">
+            <div class="example-icon">
+              <i data-lucide="trending-up"></i>
+            </div>
+            <span class="example-tag">Análisis</span>
+          </div>
+          <h3>Análisis de datos</h3>
+          <p>Visualiza el rendimiento de tu negocio con dashboards automáticos y alertas inteligentes.</p>
+          <button class="btn btn-demo" disabled>
+            <i data-lucide="play-circle"></i> Ver demo
+            <span class="demo-tooltip">Próximamente</span>
+          </button>
+        </div>
+
+        <div class="example-card reveal">
+          <div class="example-card-top">
+            <div class="example-icon">
+              <i data-lucide="message-square"></i>
+            </div>
+            <span class="example-tag">Atención al cliente</span>
+          </div>
+          <h3>Chatbot para tu web</h3>
+          <p>Un asistente virtual que responde dudas de tus clientes y agenda citas automáticamente.</p>
+          <button class="btn btn-demo" disabled>
+            <i data-lucide="play-circle"></i> Ver demo
+            <span class="demo-tooltip">Próximamente</span>
+          </button>
+        </div>
+
+        <div class="example-card reveal">
+          <div class="example-card-top">
+            <div class="example-icon">
+              <i data-lucide="calendar-check"></i>
+            </div>
+            <span class="example-tag">Organización</span>
+          </div>
+          <h3>Automatización de agendas</h3>
+          <p>Coordina reuniones, envía recordatorios y gestiona calendarios sin esfuerzo.</p>
+          <button class="btn btn-demo" disabled>
+            <i data-lucide="play-circle"></i> Ver demo
+            <span class="demo-tooltip">Próximamente</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACTO ==================== -->
+  <section class="contact" id="contacto">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag section-tag--amber">Da el primer paso</span>
+        <h2>Agenda tu llamada <span class="gradient-text-amber">gratuita</span></h2>
+        <p>30 minutos sin compromiso para conocernos, entender tu situación y ver si podemos ayudarte.</p>
+      </div>
+
+      <div class="contact-wrapper">
+        <!-- Formulario -->
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Tu nombre</label>
+              <input type="text" id="name" name="name" placeholder="María García" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Tu email</label>
+              <input type="email" id="email" name="email" placeholder="maria@tuempresa.com" required autocomplete="email" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="company">Nombre de tu empresa</label>
+            <input type="text" id="company" name="company" placeholder="Mi Empresa S.L." autocomplete="organization" />
+          </div>
+
+          <div class="form-group">
+            <label for="message">¿Qué te gustaría mejorar?</label>
+            <textarea id="message" name="message" rows="4" placeholder="Cuéntanos un poco sobre tu negocio y qué te gustaría optimizar..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-full" id="submit-btn">
+            <span id="btn-text">Quiero mi llamada gratuita →</span>
+            <span id="btn-loading" style="display:none">
+              <span class="spinner"></span> Enviando...
+            </span>
+          </button>
+
+          <div id="form-success" class="form-message form-message--success" style="display:none" role="alert">
+            <i data-lucide="check-circle"></i>
+            ¡Mensaje enviado! Te contactaré en menos de 24h.
+          </div>
+          <div id="form-error" class="form-message form-message--error" style="display:none" role="alert">
+            <i data-lucide="alert-circle"></i>
+            Algo salió mal. Escríbeme a <a href="mailto:info@novimai.com">info@novimai.com</a>
+          </div>
+
+          <p class="form-privacy">
+            Al enviar este formulario aceptas que nos pongamos en contacto contigo por email.
+          </p>
+        </form>
+
+        <!-- Info de contacto -->
+        <div class="contact-info reveal">
+          <h3>¿Prefieres escribirnos directamente?</h3>
+          <a href="mailto:info@novimai.com" class="contact-email">
+            <i data-lucide="mail"></i>
+            info@novimai.com
+          </a>
+
+          <div class="contact-promises">
+            <div class="contact-promise">
+              <i data-lucide="clock"></i>
+              <p>Respondemos en menos de 24 horas</p>
+            </div>
+            <div class="contact-promise">
+              <i data-lucide="shield"></i>
+              <p>Primera llamada 100% gratuita y sin compromiso</p>
+            </div>
+            <div class="contact-promise">
+              <i data-lucide="message-circle"></i>
+              <p>Trato cercano y personalizado desde el primer momento</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <span class="logo-novi">Novi</span><span class="logo-mai">mai</span>
+          </a>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Navegación</h4>
+            <ul>
+              <li><a href="#beneficios">Beneficios</a></li>
+              <li><a href="#servicios">Servicios</a></li>
+              <li><a href="#como-funciona">Cómo funciona</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Política de privacidad</a></li>
+              <li><a href="#">Aviso legal</a></li>
+              <li><a href="#">Cookies</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Novimai. Todos los derechos reservados.</p>
+        <p>Hecho con cariño para que tu empresa crezca</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>

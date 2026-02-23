@@ -101,16 +101,6 @@
   display: block;
 }
 
-/* Icono X (cuando el chat está abierto) */
-.chat-toggle svg {
-  width: 24px;
-  height: 24px;
-  color: #ffffff;
-}
-
-.chat-toggle .chat-icon-close {
-  position: absolute;
-}
 
 /* ── Imagen avatar en el header ── */
 .chat-header-avatar {

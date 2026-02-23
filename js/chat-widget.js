@@ -27,9 +27,6 @@
   const input     = document.getElementById('chat-input');
   const sendBtn   = document.getElementById('chat-send');
   const closeBtn  = document.getElementById('chat-close');
-  const iconOpen  = toggle.querySelector('.chat-icon-open');
-  const iconClose = toggle.querySelector('.chat-icon-close');
-
   let isOpen    = false;
   let isWaiting = false;
 
@@ -37,9 +34,7 @@
   function openPanel() {
     isOpen = true;
     panel.hidden = false;
-    iconOpen.style.display  = 'none';
-    iconClose.style.display = 'block';
-    // Ocultar el globo mientras el chat está abierto
+    // Ocultar el globo de forma permanente en esta sesión
     if (hint) hint.classList.add('chat-bubble-hint--hidden');
     input.focus();
     scrollToBottom();
@@ -48,10 +43,7 @@
   function closePanel() {
     isOpen = false;
     panel.hidden = true;
-    iconOpen.style.display  = '';
-    iconClose.style.display = 'none';
-    // Mostrar el globo de nuevo al cerrar el chat
-    if (hint) hint.classList.remove('chat-bubble-hint--hidden');
+    // El globo no reaparece — permanece oculto el resto de la sesión
   }
 
   toggle.addEventListener('click', () => isOpen ? closePanel() : openPanel());

@@ -33,21 +33,14 @@
   let isOpen    = false;
   let isWaiting = false;
 
-  // ── Ocultar el globo de hint ──
-  function hideHint() {
-    if (hint) {
-      hint.classList.add('chat-bubble-hint--hidden');
-      setTimeout(() => { hint.style.display = 'none'; }, 200);
-    }
-  }
-
   // ── Abrir / cerrar panel ──
   function openPanel() {
     isOpen = true;
     panel.hidden = false;
     iconOpen.style.display  = 'none';
     iconClose.style.display = 'block';
-    hideHint();
+    // Ocultar el globo mientras el chat está abierto
+    if (hint) hint.classList.add('chat-bubble-hint--hidden');
     input.focus();
     scrollToBottom();
   }
@@ -57,6 +50,8 @@
     panel.hidden = true;
     iconOpen.style.display  = '';
     iconClose.style.display = 'none';
+    // Mostrar el globo de nuevo al cerrar el chat
+    if (hint) hint.classList.remove('chat-bubble-hint--hidden');
   }
 
   toggle.addEventListener('click', () => isOpen ? closePanel() : openPanel());

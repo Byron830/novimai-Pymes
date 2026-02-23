@@ -50,14 +50,23 @@
   closeBtn.addEventListener('click', closePanel);
   if (hint) hint.addEventListener('click', openPanel);
 
-  // ── Añadir mensaje al DOM ──
+  // ── Añadir mensaje al DOM (convierte URLs en enlaces clicables) ──
   function appendMessage(text, role) {
     const wrapper = document.createElement('div');
     wrapper.className = 'chat-msg chat-msg--' + role;
 
     const bubble = document.createElement('div');
     bubble.className = 'chat-bubble';
-    bubble.textContent = text;
+
+    // Escapar HTML para prevenir XSS, luego linkificar URLs
+    const safe = text
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+    bubble.innerHTML = safe.replace(
+      /(https?:\/\/[^\s]+)/g,
+      '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
+    );
 
     wrapper.appendChild(bubble);
     messages.appendChild(wrapper);

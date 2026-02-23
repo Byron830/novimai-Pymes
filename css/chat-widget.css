@@ -269,6 +269,13 @@
   border-bottom-right-radius: 0.25rem;
 }
 
+/* Enlaces dentro de burbujas del bot */
+.chat-msg--bot .chat-bubble a {
+  color: var(--cyan);
+  text-decoration: underline;
+  word-break: break-all;
+}
+
 /* ── Indicador de escritura ── */
 .chat-typing {
   display: flex;

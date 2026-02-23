@@ -15,6 +15,58 @@
   font-family: var(--font);
 }
 
+/* ── Globo "¿Necesitas ayuda?" ── */
+.chat-bubble-hint {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  color: var(--text-main);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  padding: 0.55rem 0.9rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md), 0 0 0 1px var(--border);
+  white-space: nowrap;
+  position: relative;
+  animation: hintFadeIn 0.4s ease 1.8s both;
+  cursor: pointer;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.chat-bubble-hint:hover {
+  box-shadow: var(--shadow-lg), 0 0 0 1px var(--cyan-border);
+  transform: translateY(-1px);
+}
+
+/* Flecha apuntando al botón (abajo-derecha) */
+.chat-bubble-hint::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  right: 20px;
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  transform: rotate(45deg);
+}
+
+.chat-bubble-hint.chat-bubble-hint--hidden {
+  animation: hintFadeOut 0.2s ease forwards;
+  pointer-events: none;
+}
+
+@keyframes hintFadeIn {
+  from { opacity: 0; transform: translateY(6px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes hintFadeOut {
+  to { opacity: 0; transform: translateY(4px) scale(0.95); }
+}
+
 /* ── Botón flotante ── */
 .chat-toggle {
   width: 56px;

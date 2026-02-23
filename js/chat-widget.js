@@ -21,6 +21,7 @@
   // ── DOM refs ──
   const widget    = document.getElementById('chat-widget');
   const toggle    = document.getElementById('chat-toggle');
+  const hint      = document.getElementById('chat-hint');
   const panel     = document.getElementById('chat-panel');
   const messages  = document.getElementById('chat-messages');
   const input     = document.getElementById('chat-input');
@@ -29,8 +30,16 @@
   const iconOpen  = toggle.querySelector('.chat-icon-open');
   const iconClose = toggle.querySelector('.chat-icon-close');
 
-  let isOpen   = false;
+  let isOpen    = false;
   let isWaiting = false;
+
+  // ── Ocultar el globo de hint ──
+  function hideHint() {
+    if (hint) {
+      hint.classList.add('chat-bubble-hint--hidden');
+      setTimeout(() => { hint.style.display = 'none'; }, 200);
+    }
+  }
 
   // ── Abrir / cerrar panel ──
   function openPanel() {
@@ -38,6 +47,7 @@
     panel.hidden = false;
     iconOpen.style.display  = 'none';
     iconClose.style.display = 'block';
+    hideHint();
     input.focus();
     scrollToBottom();
   }
@@ -51,6 +61,7 @@
 
   toggle.addEventListener('click', () => isOpen ? closePanel() : openPanel());
   closeBtn.addEventListener('click', closePanel);
+  if (hint) hint.addEventListener('click', openPanel);
 
   // ── Añadir mensaje al DOM ──
   function appendMessage(text, role) {

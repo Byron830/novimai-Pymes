@@ -1,0 +1,545 @@
+/* ============================================================
+   PYMES.CSS — Estilos adicionales para la versión pymes
+   Novimai Landing Page — Pymes Edition
+   ============================================================ */
+
+/* ── Hero Split Layout ── */
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 1rem 0 0.5rem;
+}
+
+.hero-split .hero-content {
+  text-align: left;
+}
+
+/* ── Hero h1 — tamaño ajustado para caber en 3 líneas ── */
+.hero-split .hero-content h1 {
+  font-size: clamp(1.7rem, 3.8vw, 2.8rem);
+}
+
+.hero-split .hero-ctas {
+  justify-content: flex-start;
+}
+
+.hero-image-wrap {
+  position: relative;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(37, 99, 235, 0.12), 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.hero-image-wrap img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(29, 78, 216, 0.35));
+  pointer-events: none;
+}
+
+.img-overlay--subtle {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(29, 78, 216, 0.2));
+}
+
+.hero-image-badge {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--cyan);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-full);
+  padding: 0.5rem 1rem;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: #ffffff;
+  backdrop-filter: blur(8px);
+}
+
+.hero-image-badge svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* ── Pain cards con imagen ── */
+.pain-card--visual {
+  padding: 0;
+  overflow: hidden;
+}
+
+.pain-card--visual .pain-card-body {
+  padding: 1.5rem;
+}
+
+.pain-visual {
+  width: 100%;
+  height: 170px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pain-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.82) saturate(0.75);
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.pain-card--visual:hover .pain-visual img {
+  transform: scale(1.04);
+}
+
+.pain-visual-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(37, 99, 235, 0.06) 0%,
+    rgba(29, 78, 216, 0.2) 100%
+  );
+  pointer-events: none;
+}
+
+.pain-visual-icon {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--cyan-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cyan);
+  backdrop-filter: blur(4px);
+}
+
+.pain-visual-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ── Sectores ── */
+.sectors {
+  background: var(--bg-secondary);
+}
+
+.sectors-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.sector-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  cursor: default;
+  transition: all var(--transition);
+}
+
+.sector-card:hover {
+  border-color: var(--cyan-border);
+  background: var(--bg-card-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-cyan);
+}
+
+.sector-card .sector-icon {
+  color: var(--cyan);
+  margin: 0 auto 0.75rem;
+  display: flex;
+  justify-content: center;
+}
+
+.sector-card span {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.sectors-note {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+
+.sectors-link {
+  color: var(--cyan);
+  font-weight: 600;
+  transition: color var(--transition);
+}
+
+.sectors-link:hover {
+  color: var(--cyan-light);
+}
+
+/* ── Filosofía split ── */
+.philosophy-split {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.philosophy-image-wrap {
+  position: relative;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(37, 99, 235, 0.1), 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.philosophy-image-wrap img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+}
+
+.philosophy-content .section-header--left {
+  text-align: left;
+  margin: 0 0 2rem;
+}
+
+.philosophy-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* ── Example mockups — Phone ── */
+.example-mockup {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0.875rem;
+  margin-bottom: 1rem;
+  min-height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.mockup-phone {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.mockup-phone-bar {
+  height: 4px;
+  width: 40px;
+  background: var(--border-hover);
+  border-radius: 2px;
+  margin: 0 auto 0.35rem;
+}
+
+.mockup-msg {
+  font-size: 0.7rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 0.75rem;
+  max-width: 82%;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.mockup-msg--in {
+  background: var(--bg-card-hover);
+  color: var(--text-muted);
+  align-self: flex-start;
+  border-bottom-left-radius: 2px;
+}
+
+.mockup-msg--out {
+  background: rgba(0, 200, 232, 0.18);
+  color: var(--cyan-light);
+  align-self: flex-end;
+  border-bottom-right-radius: 2px;
+}
+
+.mockup-msg--bot {
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--cyan);
+  align-self: flex-start;
+  border-bottom-left-radius: 2px;
+}
+
+/* Testimonial avatar — light theme (verde en lugar de cyan) */
+.testimonial-avatar {
+  background: var(--gradient-amber);
+}
+
+/* ── Example mockups — Screen ── */
+.mockup-screen {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mockup-screen-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.mockup-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cyan);
+  flex-shrink: 0;
+}
+
+.mockup-dot--green {
+  background: #22c55e;
+}
+
+.mockup-bar-text {
+  font-size: 0.65rem;
+  color: var(--text-subtle);
+  font-weight: 600;
+}
+
+.mockup-row {
+  height: 7px;
+  background: var(--bg-card-hover);
+  border-radius: 4px;
+  width: 100%;
+}
+
+.mockup-row--accent {
+  background: rgba(0, 200, 232, 0.28);
+}
+
+/* ── Example mockups — Pipeline ── */
+.mockup-pipeline {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.mockup-lead {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.65rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  width: 100%;
+}
+
+.mockup-lead--new {
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--amber-light);
+  border: 1px solid var(--amber-border);
+}
+
+.mockup-lead--done {
+  background: rgba(34, 197, 94, 0.1);
+  color: #86efac;
+  border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+.mockup-lead-arrow {
+  color: var(--text-subtle);
+  font-size: 0.75rem;
+}
+
+/* ── Example mockups — Calendar ── */
+.mockup-calendar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.mockup-cal-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.65rem;
+  color: var(--text-subtle);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.mockup-cal-event {
+  font-size: 0.65rem;
+  padding: 0.3rem 0.55rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-card-hover);
+  color: var(--text-muted);
+  font-weight: 500;
+  border-left: 2px solid var(--border-hover);
+}
+
+.mockup-cal-event--cyan {
+  background: rgba(0, 200, 232, 0.08);
+  color: var(--cyan-light);
+  border-left-color: var(--cyan);
+}
+
+/* ── Testimonials ── */
+.testimonials {
+  background: var(--bg-secondary);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.testimonial-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 1.75rem;
+  transition: border-color var(--transition);
+}
+
+.testimonial-card:hover {
+  border-color: var(--amber-border);
+}
+
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--gradient-amber);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: var(--text-sm);
+  color: var(--bg-primary);
+  margin-bottom: 1.25rem;
+  flex-shrink: 0;
+}
+
+.testimonial-quote {
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+  font-size: var(--text-sm);
+}
+
+.testimonial-name {
+  font-weight: 700;
+  color: var(--text-main);
+  font-size: var(--text-sm);
+  margin-bottom: 0.25rem;
+}
+
+.testimonial-role {
+  font-size: var(--text-xs);
+  color: var(--cyan);
+  font-weight: 500;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .hero-split {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .philosophy-split {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 2.5rem;
+  }
+
+  .sectors-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-split {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 3rem 0 2rem;
+  }
+
+  .hero-split .hero-content {
+    text-align: center;
+  }
+
+  .hero-split .hero-ctas {
+    justify-content: center;
+  }
+
+  .hero-image-wrap {
+    order: -1;
+  }
+
+  .hero-image-wrap img {
+    height: 260px;
+  }
+
+  .philosophy-split {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .philosophy-image-wrap img {
+    height: 320px;
+    object-position: center 10%;
+  }
+
+  .sectors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectors-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .sector-card {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image-wrap img {
+    height: 200px;
+  }
+}

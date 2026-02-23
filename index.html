@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Novimai — Acompañamos a empresas en su transformación digital con IA. Diagnóstico, roadmap y automatizaciones a medida." />
-  <title>Novimai — Libera tu tiempo. Impulsa tu negocio.</title>
+  <meta name="description" content="Novimai — Ayudamos a pequeñas empresas a ahorrar tiempo con automatizaciones sencillas. Sin tecnicismos, sin complicaciones." />
+  <title>Novimai — Automatiza tu negocio sin complicaciones</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,6 +13,9 @@
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/components.css" />
   <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/pymes.css" />
+  <link rel="stylesheet" href="css/expand.css" />
+  <link rel="stylesheet" href="css/cookies.css" />
 </head>
 <body>
 
@@ -32,13 +35,15 @@
       </a>
 
       <ul class="nav-links" id="nav-links">
-        <li><a href="#beneficios">Beneficios</a></li>
-        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#problema">El problema</a></li>
         <li><a href="#como-funciona">Cómo funciona</a></li>
-        <li><a href="#ejemplos">Ejemplos</a></li>
+        <li><a href="ejemplos.html">Ejemplos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
 
       <a href="#contacto" class="btn btn-primary btn-nav">Agenda tu llamada</a>
+
+      <a href="#contacto" class="btn btn-primary btn-nav-mobile">Llamada gratis →</a>
 
       <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -47,10 +52,10 @@
 
     <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
       <ul>
-        <li><a href="#beneficios">Beneficios</a></li>
-        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#problema">El problema</a></li>
         <li><a href="#como-funciona">Cómo funciona</a></li>
-        <li><a href="#ejemplos">Ejemplos</a></li>
+        <li><a href="ejemplos.html">Ejemplos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
       <a href="#contacto" class="btn btn-primary">Agenda tu llamada gratuita</a>
     </div>
@@ -67,21 +72,20 @@
       <div class="hero-content">
         <span class="eyebrow">
           <i data-lucide="sparkles" class="icon-sm"></i>
-          Tu aliado en inteligencia artificial
+          Tu aliado con la inteligencia artificial
         </span>
         <h1>
-          Libera tu tiempo.<br>
-          <span class="gradient-text animated-gradient">Impulsa tu negocio.</span>
+          Recupera tu tiempo.<br>
+          <span class="gradient-text animated-gradient">Haz crecer tu negocio.</span>
         </h1>
         <p class="hero-sub">
-          Te acompañamos de forma cercana y personalizada para que descubras qué necesita tu empresa,
-          sin presiones, sin tecnicismos. Solo soluciones reales para que des el salto a la nueva era digital.
+          Te acompañamos de forma cercana y personalizada para que descubras qué necesita tu empresa, sin presiones, sin tecnicismos. Solo soluciones reales para que des el salto a la nueva era digital.
         </p>
         <div class="hero-ctas">
           <a href="#contacto" class="btn btn-primary btn-lg">
             Agenda tu llamada gratuita <span class="btn-arrow">→</span>
           </a>
-          <a href="#como-funciona" class="btn btn-outline btn-lg">Descubre cómo</a>
+          <a href="#como-funciona" class="btn btn-outline btn-lg">Ver cómo funciona</a>
         </div>
         <p class="hero-note">
           Sin compromiso · 100% gratuita · 30 min que pueden cambiarlo todo
@@ -89,45 +93,73 @@
       </div>
     </div>
 
-    <!-- Indicador de scroll -->
-    <a href="#problema" class="scroll-indicator" aria-label="Ver más">
-      <i data-lucide="chevron-down"></i>
-    </a>
   </section>
 
-  <!-- ==================== PAIN POINTS ==================== -->
+  <!-- ==================== BLOQUE 1: PAIN POINTS ==================== -->
   <section class="pain" id="problema">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">¿Te suena familiar?</span>
-        <h2>Los retos que frenan tu negocio</h2>
+        <h2>Los problemas del día a día que frenan tu negocio</h2>
         <p>Sabemos lo que es sentir que hay algo más, pero no saber exactamente cómo llegar hasta ahí.</p>
       </div>
 
-      <div class="pain-grid">
-        <div class="pain-card reveal">
-          <div class="pain-icon">
-            <i data-lucide="help-circle"></i>
+      <div class="pain-grid exp-grid-3">
+
+        <div class="card-exp reveal">
+          <div class="pain-visual">
+            <img src="Imágenes/No sabes por donde empezar.png" alt="No sabes por dónde empezar" loading="lazy" />
+            <div class="pain-visual-overlay"></div>
+            <div class="pain-visual-icon"><i data-lucide="help-circle"></i></div>
           </div>
-          <h3>No sabes por dónde empezar</h3>
-          <p>Escuchas hablar de IA y automatización, pero nadie te explica qué necesita TU empresa concretamente.</p>
+          <div class="card-exp-header">
+            <h3 class="card-exp-title">No sabes por dónde empezar</h3>
+            <button class="card-exp-btn" aria-expanded="false">
+              <span class="card-exp-label">Leer más</span>
+              <i data-lucide="chevron-down" class="card-exp-arrow"></i>
+            </button>
+          </div>
+          <div class="card-exp-body" hidden>
+            <p>Escuchas hablar de IA y automatización, pero nadie te explica qué necesita TU empresa concretamente.</p>
+          </div>
         </div>
 
-        <div class="pain-card reveal">
-          <div class="pain-icon">
-            <i data-lucide="timer"></i>
+        <div class="card-exp reveal">
+          <div class="pain-visual">
+            <img src="Imágenes/El whatsapp no para.jpg" alt="El WhatsApp no para" loading="lazy" />
+            <div class="pain-visual-overlay"></div>
+            <div class="pain-visual-icon"><i data-lucide="timer"></i></div>
           </div>
-          <h3>Pierdes horas en tareas repetitivas</h3>
-          <p>Tu equipo dedica demasiado tiempo a procesos que podrían resolverse solos, restando energía a lo que realmente importa.</p>
+          <div class="card-exp-header">
+            <h3 class="card-exp-title">El WhatsApp no para, el Excel tampoco</h3>
+            <button class="card-exp-btn" aria-expanded="false">
+              <span class="card-exp-label">Leer más</span>
+              <i data-lucide="chevron-down" class="card-exp-arrow"></i>
+            </button>
+          </div>
+          <div class="card-exp-body" hidden>
+            <p>Respondes los mismos mensajes una y otra vez. Rellenas las mismas hojas cada semana. Confirmas citas manualmente. Son horas que se van y nunca vuelven.</p>
+          </div>
         </div>
 
-        <div class="pain-card reveal">
-          <div class="pain-icon">
-            <i data-lucide="brain"></i>
+        <div class="card-exp reveal">
+          <div class="pain-visual">
+            <img src="Imágenes/Miedo a meter la pata con la tecnologia.png" alt="Miedo a meter la pata con la tecnología" loading="lazy" />
+            <div class="pain-visual-overlay"></div>
+            <div class="pain-visual-icon"><i data-lucide="brain"></i></div>
           </div>
-          <h3>Incertidumbre tecnológica</h3>
-          <p>El miedo a equivocarte con una inversión que no entiendes frena tu crecimiento y el de tu negocio.</p>
+          <div class="card-exp-header">
+            <h3 class="card-exp-title">Miedo a meter la pata con la tecnología</h3>
+            <button class="card-exp-btn" aria-expanded="false">
+              <span class="card-exp-label">Leer más</span>
+              <i data-lucide="chevron-down" class="card-exp-arrow"></i>
+            </button>
+          </div>
+          <div class="card-exp-body" hidden>
+            <p>Estás harto de aplicaciones enrevesadas y conceptos difíciles, lo entendemos. Por eso adaptamos la tecnología a ti, no al revés. Sin curva de aprendizaje, sin complicaciones innecesarias.</p>
+          </div>
         </div>
+
       </div>
 
       <div class="pain-transition reveal">
@@ -138,158 +170,66 @@
     </div>
   </section>
 
-  <!-- ==================== BENEFICIOS ==================== -->
+  <!-- ==================== BLOQUE 2: BENEFICIOS + MINI EJEMPLOS ==================== -->
   <section class="benefits" id="beneficios">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag section-tag--amber">Lo que vas a conseguir</span>
-        <h2>Beneficios que <span class="gradient-text-amber">transforman</span> tu negocio</h2>
-        <p>No se trata solo de tecnología. Se trata de que tú y tu empresa deis un paso hacia adelante.</p>
+        <h2>Resultados <span class="gradient-text-amber">concretos</span> para tu negocio</h2>
+        <p>No vendemos tecnología. Vendemos tiempo libre, menos estrés y un negocio que funciona mejor.</p>
       </div>
 
-      <div class="benefits-grid">
-        <div class="benefit-card reveal">
-          <div class="benefit-icon benefit-icon--amber">
-            <i data-lucide="clock"></i>
+      <!-- 3 cards de beneficio expandibles -->
+      <div class="exp-grid-3" style="margin-bottom: 3rem;">
+
+        <div class="card-exp card-exp--green reveal">
+          <div class="card-exp-header">
+            <div class="card-exp-icon"><i data-lucide="shield-check"></i></div>
+            <h3 class="card-exp-title">Certificación ISO 9001</h3>
+            <button class="card-exp-btn" aria-expanded="false">
+              <span class="card-exp-label">Leer más</span>
+              <i data-lucide="chevron-down" class="card-exp-arrow"></i>
+            </button>
           </div>
-          <h3>Recupera tu tiempo</h3>
-          <p>Automatiza las tareas que te roban horas cada semana y dedícate a lo que realmente importa.</p>
+          <div class="card-exp-body" hidden>
+            <p>Nuestro análisis te permite solicitar el certificado de calidad ISO 9001, lo que aumenta la confianza de tus clientes, abre puertas a contratos públicos y diferencia tu negocio de la competencia.</p>
+          </div>
         </div>
 
-        <div class="benefit-card reveal">
-          <div class="benefit-icon benefit-icon--amber">
-            <i data-lucide="trending-up"></i>
+        <div class="card-exp card-exp--green reveal">
+          <div class="card-exp-header">
+            <div class="card-exp-icon"><i data-lucide="zap"></i></div>
+            <h3 class="card-exp-title">Reduce gastos innecesarios</h3>
+            <button class="card-exp-btn" aria-expanded="false">
+              <span class="card-exp-label">Leer más</span>
+              <i data-lucide="chevron-down" class="card-exp-arrow"></i>
+            </button>
           </div>
-          <h3>Da un salto de calidad</h3>
-          <p>Optimiza procesos para ofrecer un servicio más rápido, eficiente y profesional a tus clientes.</p>
+          <div class="card-exp-body" hidden>
+            <p>Menos horas dedicadas a tareas manuales significa menos costes operativos. El dinero que ahorras en tiempo queda en tu negocio para invertirlo en lo que realmente importa.</p>
+          </div>
         </div>
 
-        <div class="benefit-card reveal">
-          <div class="benefit-icon benefit-icon--amber">
-            <i data-lucide="zap"></i>
+        <div class="card-exp card-exp--green reveal">
+          <div class="card-exp-header">
+            <div class="card-exp-icon"><i data-lucide="heart"></i></div>
+            <h3 class="card-exp-title">Deja de llevarlo todo solo</h3>
+            <button class="card-exp-btn" aria-expanded="false">
+              <span class="card-exp-label">Leer más</span>
+              <i data-lucide="chevron-down" class="card-exp-arrow"></i>
+            </button>
           </div>
-          <h3>Reduce costes reales</h3>
-          <p>Menos tiempo en tareas manuales significa menos gasto en recursos y más margen para crecer.</p>
+          <div class="card-exp-body" hidden>
+            <p>La tecnología puede encargarse de muchas cosas: responder mensajes, confirmar citas, generar informes. Nosotros te enseñamos exactamente cuáles, para que puedas desconectar de verdad.</p>
+          </div>
         </div>
 
-        <div class="benefit-card reveal">
-          <div class="benefit-icon benefit-icon--amber">
-            <i data-lucide="shield-check"></i>
-          </div>
-          <h3>Certificación ISO 9001</h3>
-          <p>Nuestro diagnóstico te permite solicitar el certificado de calidad, aumentando la confianza en tus clientes.</p>
-          <span class="badge-inline">Incluido en Asesoramiento Operativo</span>
-        </div>
-
-        <div class="benefit-card reveal">
-          <div class="benefit-icon benefit-icon--amber">
-            <i data-lucide="heart"></i>
-          </div>
-          <h3>Libera tu carga</h3>
-          <p>Deja de sentir que llevas todo el peso. Te ayudamos a delegar en la tecnología lo que no necesitas hacer tú.</p>
-        </div>
-
-        <div class="benefit-card reveal">
-          <div class="benefit-icon benefit-icon--amber">
-            <i data-lucide="target"></i>
-          </div>
-          <h3>Céntrate en lo importante</h3>
-          <p>Con los procesos optimizados, puedes enfocarte en estrategia, ventas y hacer crecer tu negocio.</p>
-        </div>
       </div>
+
     </div>
   </section>
 
-  <!-- ==================== SERVICIOS ==================== -->
-  <section class="services" id="servicios">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Nuestros servicios</span>
-        <h2>Un camino pensado <span class="gradient-text">para ti</span></h2>
-        <p>No vendemos paquetes genéricos. Primero entendemos tu negocio, luego te proponemos exactamente lo que necesitas.</p>
-      </div>
-
-      <div class="services-grid">
-        <!-- Asesoramiento Operativo -->
-        <div class="service-card service-card--amber reveal">
-          <div class="service-badge service-badge--amber">Servicio principal</div>
-          <div class="service-icon service-icon--amber">
-            <i data-lucide="compass"></i>
-          </div>
-          <h3>Asesoramiento Operativo</h3>
-          <p>Tu diagnóstico personalizado. Analizamos a fondo los procesos de tu empresa, creamos un roadmap claro y te mostramos exactamente dónde puedes mejorar. Sin sorpresas, sin letra pequeña.</p>
-          <ul class="service-includes service-includes--amber">
-            <li><i data-lucide="check-circle-2"></i> Análisis completo de tus procesos actuales</li>
-            <li><i data-lucide="check-circle-2"></i> Roadmap personalizado con prioridades claras</li>
-            <li><i data-lucide="check-circle-2"></i> Identificación de puntos de mejora inmediatos</li>
-            <li><i data-lucide="check-circle-2"></i> Compatible con certificación ISO 9001</li>
-            <li><i data-lucide="check-circle-2"></i> Acompañamiento cercano durante todo el proceso</li>
-          </ul>
-          <a href="#contacto" class="btn btn-amber btn-service">Quiero mi Asesoramiento Operativo →</a>
-        </div>
-
-        <!-- Implementaciones -->
-        <div class="service-card service-card--secondary reveal">
-          <div class="service-badge service-badge--cyan">Paso siguiente</div>
-          <div class="service-icon service-icon--cyan">
-            <i data-lucide="settings-2"></i>
-          </div>
-          <h3>Implementaciones</h3>
-          <p>Una vez tengas tu Asesoramiento Operativo, tú decides qué automatizaciones implementar. Nosotros las desarrollamos y ponemos en marcha contigo, asegurándonos de que todo funciona a la perfección.</p>
-          <ul class="service-includes service-includes--cyan">
-            <li><i data-lucide="check-circle-2"></i> Desarrollo a medida según tu roadmap</li>
-            <li><i data-lucide="check-circle-2"></i> Integración con tus sistemas actuales</li>
-            <li><i data-lucide="check-circle-2"></i> Formación para tu equipo</li>
-            <li><i data-lucide="check-circle-2"></i> Soporte y ajustes post-implementación</li>
-          </ul>
-          <p class="service-note">
-            <i data-lucide="info"></i>
-            Solo disponible tras completar el Asesoramiento Operativo
-          </p>
-          <a href="#contacto" class="btn btn-outline btn-service">Háblame de esto →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== FILOSOFÍA ==================== -->
-  <section class="philosophy" id="filosofia">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Nuestra filosofía</span>
-        <h2>No somos una empresa de IA <span class="gradient-text">más</span></h2>
-        <p>En Novimai creemos que la tecnología debe adaptarse a ti, no al revés. En un mundo tan cambiante como el de la inteligencia artificial, lo que necesitas es alguien de confianza a tu lado que te ayude a navegar sin perderte.</p>
-      </div>
-
-      <div class="philosophy-grid">
-        <div class="philosophy-card reveal">
-          <div class="philosophy-icon">
-            <i data-lucide="handshake"></i>
-          </div>
-          <h3>Acompañamiento 1 a 1</h3>
-          <p>No te vendemos un producto. Te guiamos en un proceso para que tú tomes las decisiones con toda la información.</p>
-        </div>
-
-        <div class="philosophy-card reveal">
-          <div class="philosophy-icon">
-            <i data-lucide="eye"></i>
-          </div>
-          <h3>Transparencia total</h3>
-          <p>Te explicamos todo en tu idioma, sin tecnicismos innecesarios. Queremos que entiendas cada paso que damos juntos.</p>
-        </div>
-
-        <div class="philosophy-card reveal">
-          <div class="philosophy-icon">
-            <i data-lucide="message-circle"></i>
-          </div>
-          <h3>Cercanía real</h3>
-          <p>Somos personas trabajando con personas. Tu éxito es nuestro éxito, y eso se nota en cada conversación.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== CÓMO FUNCIONA ==================== -->
+  <!-- ==================== BLOQUE 3: CÓMO FUNCIONA + FILOSOFÍA ==================== -->
   <section class="how-it-works" id="como-funciona">
     <div class="container">
       <div class="section-header reveal">
@@ -305,157 +245,205 @@
 
         <div class="timeline-step reveal" data-step="1">
           <div class="timeline-icon-wrap">
-            <div class="timeline-icon">
-              <i data-lucide="phone-call"></i>
-            </div>
+            <div class="timeline-icon"><i data-lucide="phone-call"></i></div>
           </div>
-          <div class="timeline-content">
-            <span class="timeline-number">01</span>
-            <h3>Agenda tu llamada</h3>
-            <p>Una conversación de 30 minutos donde nos conocemos, resolvemos tus dudas y analizamos si nuestros servicios son lo que tu empresa necesita. Sin compromiso.</p>
+          <div class="card-exp timeline-card">
+            <div class="card-exp-header">
+              <div class="timeline-card-text">
+                <span class="timeline-number">01</span>
+                <h3 class="card-exp-title">Hablamos gratis, sin compromiso</h3>
+              </div>
+              <button class="card-exp-btn" aria-expanded="false">
+                <span class="card-exp-label">Leer más</span>
+                <i data-lucide="chevron-down" class="card-exp-arrow"></i>
+              </button>
+            </div>
+            <div class="card-exp-body" hidden>
+              <p>Una llamada de 30 minutos para conocernos, entender tu situación y ver si somos lo que necesitas. Si no encajamos, te lo decimos sin rodeos.</p>
+            </div>
           </div>
         </div>
 
         <div class="timeline-step reveal" data-step="2">
           <div class="timeline-icon-wrap">
-            <div class="timeline-icon">
-              <i data-lucide="search"></i>
-            </div>
+            <div class="timeline-icon"><i data-lucide="search"></i></div>
           </div>
-          <div class="timeline-content">
-            <span class="timeline-number">02</span>
-            <h3>Diagnóstico profundo</h3>
-            <p>Analizamos tus procesos, hablamos con tu equipo y entendemos cada detalle de cómo funciona tu negocio.</p>
+          <div class="card-exp timeline-card">
+            <div class="card-exp-header">
+              <div class="timeline-card-text">
+                <span class="timeline-number">02</span>
+                <h3 class="card-exp-title">Analizamos tu negocio a fondo</h3>
+              </div>
+              <button class="card-exp-btn" aria-expanded="false">
+                <span class="card-exp-label">Leer más</span>
+                <i data-lucide="chevron-down" class="card-exp-arrow"></i>
+              </button>
+            </div>
+            <div class="card-exp-body" hidden>
+              <p>Miramos cómo trabajas ahora, hablamos con tu equipo si hace falta, y entendemos cada proceso antes de proponer nada.</p>
+            </div>
           </div>
         </div>
 
         <div class="timeline-step reveal" data-step="3">
           <div class="timeline-icon-wrap">
-            <div class="timeline-icon">
-              <i data-lucide="map"></i>
-            </div>
+            <div class="timeline-icon"><i data-lucide="map"></i></div>
           </div>
-          <div class="timeline-content">
-            <span class="timeline-number">03</span>
-            <h3>Tu Asesoramiento Operativo</h3>
-            <p>Te entregamos un roadmap claro con las oportunidades de mejora priorizadas y recomendaciones personalizadas.</p>
+          <div class="card-exp timeline-card">
+            <div class="card-exp-header">
+              <div class="timeline-card-text">
+                <span class="timeline-number">03</span>
+                <h3 class="card-exp-title">Te entregamos un plan claro</h3>
+              </div>
+              <button class="card-exp-btn" aria-expanded="false">
+                <span class="card-exp-label">Leer más</span>
+                <i data-lucide="chevron-down" class="card-exp-arrow"></i>
+              </button>
+            </div>
+            <div class="card-exp-body" hidden>
+              <p>Un mapa de procesos que muestre cómo funciona tu empresa por dentro, qué aspectos se podrían mejorar y cuáles están bien. Con este mapa puedes solicitar el certificado ISO 9001 para tu empresa.</p>
+            </div>
           </div>
         </div>
 
         <div class="timeline-step reveal" data-step="4">
           <div class="timeline-icon-wrap">
-            <div class="timeline-icon">
-              <i data-lucide="rocket"></i>
-            </div>
+            <div class="timeline-icon"><i data-lucide="rocket"></i></div>
           </div>
-          <div class="timeline-content">
-            <span class="timeline-number">04</span>
-            <h3>Implementación a tu ritmo</h3>
-            <p>Tú decides qué automatizaciones poner en marcha. Nosotros las desarrollamos y te acompañamos paso a paso.</p>
+          <div class="card-exp timeline-card">
+            <div class="card-exp-header">
+              <div class="timeline-card-text">
+                <span class="timeline-number">04</span>
+                <h3 class="card-exp-title">Implementamos a tu ritmo</h3>
+              </div>
+              <button class="card-exp-btn" aria-expanded="false">
+                <span class="card-exp-label">Leer más</span>
+                <i data-lucide="chevron-down" class="card-exp-arrow"></i>
+              </button>
+            </div>
+            <div class="card-exp-body" hidden>
+              <p>Tú decides qué mejoras quieres Implementar primero. Nosotros las ponemos en marcha y te acompañamos hasta que todo funciona solo.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==================== EJEMPLOS ==================== -->
-  <section class="examples" id="ejemplos">
+  <!-- Filosofía (fusionada visualmente en el bloque 3) -->
+  <section class="philosophy" id="filosofia">
+    <div class="container">
+      <div class="philosophy-split">
+        <div class="philosophy-image-wrap reveal">
+          <img
+            src="Imágenes/Nuestra filosofia.png"
+            alt="Nuestra filosofía"
+            loading="lazy"
+          />
+          <div class="img-overlay img-overlay--subtle"></div>
+        </div>
+        <div class="philosophy-content">
+          <div class="section-header section-header--left reveal">
+            <span class="section-tag">Nuestra filosofía</span>
+            <h2>No somos una empresa de IA <span class="gradient-text">más</span></h2>
+            <p>En Novimai creemos que la tecnología debe adaptarse a ti, no al revés. En un mundo tan cambiante como el de la inteligencia artificial, lo que necesitas es alguien de confianza a tu lado que te ayude a navegar sin perderte.</p>
+          </div>
+
+          <div class="philosophy-cards">
+
+            <div class="card-exp reveal">
+              <div class="card-exp-header">
+                <div class="card-exp-icon"><i data-lucide="handshake"></i></div>
+                <h3 class="card-exp-title">Atención 1 a 1</h3>
+                <button class="card-exp-btn" aria-expanded="false">
+                  <span class="card-exp-label">Leer más</span>
+                  <i data-lucide="chevron-down" class="card-exp-arrow"></i>
+                </button>
+              </div>
+              <div class="card-exp-body" hidden>
+                <p>No te vendemos un producto de catálogo. Te acompañamos en un proceso para que tomes las decisiones con toda la información.</p>
+              </div>
+            </div>
+
+            <div class="card-exp reveal">
+              <div class="card-exp-header">
+                <div class="card-exp-icon"><i data-lucide="eye"></i></div>
+                <h3 class="card-exp-title">Sin letra pequeña</h3>
+                <button class="card-exp-btn" aria-expanded="false">
+                  <span class="card-exp-label">Leer más</span>
+                  <i data-lucide="chevron-down" class="card-exp-arrow"></i>
+                </button>
+              </div>
+              <div class="card-exp-body" hidden>
+                <p>Te explicamos todo en tu idioma, sin tecnicismos. Queremos que entiendas cada paso que damos juntos antes de darlo.</p>
+              </div>
+            </div>
+
+            <div class="card-exp reveal">
+              <div class="card-exp-header">
+                <div class="card-exp-icon"><i data-lucide="message-circle"></i></div>
+                <h3 class="card-exp-title">Cercanía de verdad</h3>
+                <button class="card-exp-btn" aria-expanded="false">
+                  <span class="card-exp-label">Leer más</span>
+                  <i data-lucide="chevron-down" class="card-exp-arrow"></i>
+                </button>
+              </div>
+              <div class="card-exp-body" hidden>
+                <p>Tu negocio nos importa. Tu éxito es nuestro éxito, y eso se nota desde la primera llamada hasta mucho después de la implementación.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BLOQUE 4: SERVICIOS ==================== -->
+  <section class="services" id="servicios">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Ejemplos reales</span>
-        <h2>¿Qué puedes <span class="gradient-text">automatizar</span>?</h2>
-        <p>Estas son solo algunas de las soluciones que hemos diseñado para empresas como la tuya.</p>
+        <span class="section-tag">Un camino pensado para ti</span>
+        <h2>Nuestros <span class="gradient-text">servicios</span></h2>
+        <p>Primero te escuchamos. Luego te decimos qué necesitas exactamente, sin venderte nada que no vaya a servirte.</p>
       </div>
 
-      <div class="examples-grid">
-        <div class="example-card reveal">
-          <div class="example-card-top">
-            <div class="example-icon">
-              <i data-lucide="mail"></i>
-            </div>
-            <span class="example-tag">Atención al cliente</span>
+      <div class="services-grid">
+        <div class="service-card service-card--secondary reveal">
+          <div class="service-badge service-badge--cyan">Por aquí se empieza</div>
+          <div class="service-icon service-icon--cyan">
+            <i data-lucide="compass"></i>
           </div>
-          <h3>Respuestas automáticas a clientes</h3>
-          <p>Responde emails y consultas de forma inteligente sin mover un dedo, 24/7.</p>
-          <button class="btn btn-demo" disabled>
-            <i data-lucide="play-circle"></i> Ver demo
-            <span class="demo-tooltip">Próximamente</span>
-          </button>
+          <h3>Análisis de tu negocio</h3>
+          <p>Miramos cómo funciona tu empresa por dentro: qué haces cada día, dónde se pierde el tiempo y qué podría mejorar. Al final te entregamos un plan claro con prioridades y sin sorpresas.</p>
+          <ul class="service-includes service-includes--amber">
+            <li><i data-lucide="check-circle-2"></i> Revisión completa de cómo trabajas ahora</li>
+            <li><i data-lucide="check-circle-2"></i> Plan de mejora paso a paso con prioridades claras</li>
+            <li><i data-lucide="check-circle-2"></i> Identificación de qué puedes mejorar ya</li>
+            <li><i data-lucide="check-circle-2"></i> Compatible con certificación ISO 9001</li>
+            <li><i data-lucide="check-circle-2"></i> Acompañamiento cercano durante todo el proceso</li>
+          </ul>
+          <a href="#contacto" class="btn btn-primary btn-service">Agenda mi llamada gratuita →</a>
         </div>
 
-        <div class="example-card reveal">
-          <div class="example-card-top">
-            <div class="example-icon">
-              <i data-lucide="bar-chart-2"></i>
-            </div>
-            <span class="example-tag">Productividad</span>
+        <div class="service-card service-card--secondary reveal">
+          <div class="service-badge service-badge--cyan">El siguiente paso</div>
+          <div class="service-icon service-icon--cyan">
+            <i data-lucide="settings-2"></i>
           </div>
-          <h3>Generación de informes</h3>
-          <p>Crea informes y reportes automatizados con los datos de tu negocio al instante.</p>
-          <button class="btn btn-demo" disabled>
-            <i data-lucide="play-circle"></i> Ver demo
-            <span class="demo-tooltip">Próximamente</span>
-          </button>
-        </div>
-
-        <div class="example-card reveal">
-          <div class="example-card-top">
-            <div class="example-icon">
-              <i data-lucide="users"></i>
-            </div>
-            <span class="example-tag">Ventas</span>
-          </div>
-          <h3>Gestión de leads</h3>
-          <p>Captura, clasifica y hace seguimiento de clientes potenciales sin intervención manual.</p>
-          <button class="btn btn-demo" disabled>
-            <i data-lucide="play-circle"></i> Ver demo
-            <span class="demo-tooltip">Próximamente</span>
-          </button>
-        </div>
-
-        <div class="example-card reveal">
-          <div class="example-card-top">
-            <div class="example-icon">
-              <i data-lucide="trending-up"></i>
-            </div>
-            <span class="example-tag">Análisis</span>
-          </div>
-          <h3>Análisis de datos</h3>
-          <p>Visualiza el rendimiento de tu negocio con dashboards automáticos y alertas inteligentes.</p>
-          <button class="btn btn-demo" disabled>
-            <i data-lucide="play-circle"></i> Ver demo
-            <span class="demo-tooltip">Próximamente</span>
-          </button>
-        </div>
-
-        <div class="example-card reveal">
-          <div class="example-card-top">
-            <div class="example-icon">
-              <i data-lucide="message-square"></i>
-            </div>
-            <span class="example-tag">Atención al cliente</span>
-          </div>
-          <h3>Chatbot para tu web</h3>
-          <p>Un asistente virtual que responde dudas de tus clientes y agenda citas automáticamente.</p>
-          <button class="btn btn-demo" disabled>
-            <i data-lucide="play-circle"></i> Ver demo
-            <span class="demo-tooltip">Próximamente</span>
-          </button>
-        </div>
-
-        <div class="example-card reveal">
-          <div class="example-card-top">
-            <div class="example-icon">
-              <i data-lucide="calendar-check"></i>
-            </div>
-            <span class="example-tag">Organización</span>
-          </div>
-          <h3>Automatización de agendas</h3>
-          <p>Coordina reuniones, envía recordatorios y gestiona calendarios sin esfuerzo.</p>
-          <button class="btn btn-demo" disabled>
-            <i data-lucide="play-circle"></i> Ver demo
-            <span class="demo-tooltip">Próximamente</span>
-          </button>
+          <h3>Ponemos en marcha las mejoras</h3>
+          <p>Una vez que tienes claro qué mejorar, tú decides qué automatizaciones quieres activar primero. Nosotros las desarrollamos, las probamos contigo y te enseñamos a usarlas.</p>
+          <ul class="service-includes service-includes--cyan">
+            <li><i data-lucide="check-circle-2"></i> Desarrollo adaptado a tu negocio concreto</li>
+            <li><i data-lucide="check-circle-2"></i> Conectamos con las herramientas que ya usas</li>
+            <li><i data-lucide="check-circle-2"></i> Formamos a tu equipo sin tecnicismos</li>
+            <li><i data-lucide="check-circle-2"></i> Soporte y ajustes después de la puesta en marcha</li>
+          </ul>
+          <p class="service-note">
+            <i data-lucide="info"></i>
+            Solo disponible tras completar el análisis inicial
+          </p>
+          <a href="ejemplos.html" class="btn btn-outline-cyan btn-service">Dame ejemplos →</a>
         </div>
       </div>
     </div>
@@ -465,13 +453,12 @@
   <section class="contact" id="contacto">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag section-tag--amber">Da el primer paso</span>
+        <span class="section-tag">Da el primer paso</span>
         <h2>Agenda tu llamada <span class="gradient-text-amber">gratuita</span></h2>
         <p>30 minutos sin compromiso para conocernos, entender tu situación y ver si podemos ayudarte.</p>
       </div>
 
       <div class="contact-wrapper">
-        <!-- Formulario -->
         <form class="contact-form reveal" id="contact-form" novalidate>
           <div class="form-row">
             <div class="form-group">
@@ -485,13 +472,13 @@
           </div>
 
           <div class="form-group">
-            <label for="company">Nombre de tu empresa</label>
-            <input type="text" id="company" name="company" placeholder="Mi Empresa S.L." autocomplete="organization" />
+            <label for="company">Nombre de tu empresa y sector</label>
+            <input type="text" id="company" name="company" placeholder="Peluquería El Rincón · Peluquería" autocomplete="organization" />
           </div>
 
           <div class="form-group">
-            <label for="message">¿Qué te gustaría mejorar?</label>
-            <textarea id="message" name="message" rows="4" placeholder="Cuéntanos un poco sobre tu negocio y qué te gustaría optimizar..." required></textarea>
+            <label for="message">¿Qué tarea te roba más tiempo ahora mismo?</label>
+            <textarea id="message" name="message" rows="4" placeholder="Ej: Confirmar citas por WhatsApp, rellenar hojas de Excel cada semana, responder siempre las mismas preguntas de clientes..." required></textarea>
           </div>
 
           <button type="submit" class="btn btn-primary btn-lg btn-full" id="submit-btn">
@@ -503,7 +490,7 @@
 
           <div id="form-success" class="form-message form-message--success" style="display:none" role="alert">
             <i data-lucide="check-circle"></i>
-            ¡Mensaje enviado! Te contactaré en menos de 24h.
+            ¡Perfecto! Te escribo en menos de 24h para confirmar la llamada.
           </div>
           <div id="form-error" class="form-message form-message--error" style="display:none" role="alert">
             <i data-lucide="alert-circle"></i>
@@ -515,7 +502,6 @@
           </p>
         </form>
 
-        <!-- Info de contacto -->
         <div class="contact-info reveal">
           <h3>¿Prefieres escribirnos directamente?</h3>
           <a href="mailto:info@novimai.com" class="contact-email">
@@ -551,38 +537,95 @@
             <span class="logo-novi">Novi</span><span class="logo-mai">mai</span>
           </a>
         </div>
-
         <div class="footer-links">
           <div class="footer-col">
             <h4>Navegación</h4>
             <ul>
-              <li><a href="#beneficios">Beneficios</a></li>
-              <li><a href="#servicios">Servicios</a></li>
+              <li><a href="#problema">El problema</a></li>
               <li><a href="#como-funciona">Cómo funciona</a></li>
+              <li><a href="ejemplos.html">Ejemplos</a></li>
               <li><a href="#contacto">Contacto</a></li>
             </ul>
           </div>
           <div class="footer-col">
             <h4>Legal</h4>
             <ul>
-              <li><a href="#">Política de privacidad</a></li>
-              <li><a href="#">Aviso legal</a></li>
-              <li><a href="#">Cookies</a></li>
+              <li><a href="politica-privacidad.html">Política de privacidad</a></li>
+              <li><a href="aviso-legal.html">Aviso legal</a></li>
+              <li><a href="politica-cookies.html">Cookies</a></li>
             </ul>
           </div>
         </div>
       </div>
-
       <div class="footer-bottom">
-        <p>© 2025 Novimai. Todos los derechos reservados.</p>
+        <p>© 2026 Novimai. Todos los derechos reservados.</p>
         <p>Hecho con cariño para que tu empresa crezca</p>
       </div>
     </div>
   </footer>
 
+  <!-- Botón CTA flotante -->
+  <div class="sticky-cta" id="sticky-cta">
+    <a href="#contacto" class="btn btn-primary">
+      Agenda mi llamada gratuita →
+    </a>
+  </div>
+
+  <!-- Barra de progreso lateral -->
+  <div class="scroll-progress-track" aria-hidden="true">
+    <div class="scroll-progress-fill" id="scroll-progress-fill"></div>
+  </div>
+
+  <!-- Banner de cookies -->
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Preferencias de cookies">
+    <div class="cookie-banner-inner">
+      <div class="cookie-banner-text">
+        <strong>Este sitio usa cookies</strong>
+        <p>
+          Usamos cookies analíticas para mejorar tu experiencia. Puedes aceptarlas, rechazarlas o
+          <a href="politica-cookies.html">ver la política completa</a>.
+        </p>
+      </div>
+      <div class="cookie-banner-actions">
+        <button id="cookie-config-btn" class="cookie-btn cookie-btn--outline">Configurar</button>
+        <button id="cookie-reject-btn" class="cookie-btn cookie-btn--outline">Rechazar</button>
+        <button id="cookie-accept-btn" class="cookie-btn cookie-btn--primary">Aceptar todo</button>
+      </div>
+    </div>
+    <div id="cookie-config-panel" class="cookie-config-panel" hidden>
+      <div class="cookie-config-panel-inner">
+        <div class="cookie-category">
+          <div class="cookie-category-header">
+            <div class="cookie-category-info">
+              <h4>Cookies técnicas</h4>
+              <p>Necesarias para el funcionamiento básico del sitio. No se pueden desactivar.</p>
+            </div>
+            <span class="cookie-always-on">Siempre activas</span>
+          </div>
+        </div>
+        <div class="cookie-category">
+          <div class="cookie-category-header">
+            <div class="cookie-category-info">
+              <h4>Cookies analíticas</h4>
+              <p>Google Analytics — Nos ayuda a entender cómo se usa el sitio de forma anónima.</p>
+            </div>
+            <label class="cookie-toggle-label" aria-label="Activar cookies analíticas">
+              <input type="checkbox" id="analytics-toggle" />
+              <span class="cookie-toggle-track"></span>
+            </label>
+          </div>
+        </div>
+        <div class="cookie-config-save">
+          <button id="cookie-save-btn" class="cookie-btn cookie-btn--primary">Guardar preferencias</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/main.js"></script>
   <script src="js/form.js"></script>
+  <script src="js/cookies.js"></script>
 </body>
 </html>

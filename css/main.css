@@ -5,40 +5,40 @@
 
 /* ── Variables ── */
 :root {
-  /* Colores principales */
-  --bg-primary:    #080b14;
-  --bg-secondary:  #0d1117;
-  --bg-card:       #111827;
-  --bg-card-hover: #16213a;
-  --bg-highlight:  #0a1628;
+  /* Colores principales — Tema Light */
+  --bg-primary:    #ffffff;
+  --bg-secondary:  #f0f5ff;
+  --bg-card:       #ffffff;
+  --bg-card-hover: #f8faff;
+  --bg-highlight:  #eff6ff;
 
-  /* Cyan / Azul — color primario de acción */
-  --cyan:        #00c8e8;
-  --cyan-light:  #33d6ee;
-  --cyan-dark:   #0099bb;
-  --cyan-glow:   rgba(0, 200, 232, 0.18);
-  --cyan-border: rgba(0, 200, 232, 0.25);
+  /* Azul eléctrico — color primario (confianza) */
+  --cyan:        #2563eb;
+  --cyan-light:  #3b82f6;
+  --cyan-dark:   #1d4ed8;
+  --cyan-glow:   rgba(37, 99, 235, 0.12);
+  --cyan-border: rgba(37, 99, 235, 0.2);
 
-  /* Amber / Naranja — color de Asesoramiento Operativo */
-  --amber:       #f59e0b;
-  --amber-light: #fbbf24;
-  --amber-dark:  #d97706;
-  --amber-glow:  rgba(245, 158, 11, 0.18);
-  --amber-border: rgba(245, 158, 11, 0.3);
+  /* Azul profundo — diferenciación y acción (CTAs principales) */
+  --amber:       #1e3a8a;
+  --amber-light: #2d55b8;
+  --amber-dark:  #1a3272;
+  --amber-glow:  rgba(30, 58, 138, 0.12);
+  --amber-border: rgba(30, 58, 138, 0.22);
 
   /* Texto */
-  --text-main:    #f1f5f9;
-  --text-muted:   #94a3b8;
-  --text-subtle:  #64748b;
-  --text-inverse: #080b14;
+  --text-main:    #111827;
+  --text-muted:   #374151;
+  --text-subtle:  #6b7280;
+  --text-inverse: #ffffff;
 
   /* Bordes */
-  --border:       rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(255, 255, 255, 0.15);
+  --border:       rgba(0, 0, 0, 0.08);
+  --border-hover: rgba(0, 0, 0, 0.18);
 
   /* Gradientes */
-  --gradient-cyan:  linear-gradient(135deg, #00c8e8, #0060ff);
-  --gradient-amber: linear-gradient(135deg, #f59e0b, #fbbf24);
+  --gradient-cyan:  linear-gradient(135deg, #2563eb, #1d4ed8);
+  --gradient-amber: linear-gradient(135deg, #1e3a8a, #2563eb);
 
   /* Tipografía */
   --font: 'Quicksand', sans-serif;
@@ -69,12 +69,12 @@
   --radius-xl:   1.5rem;
   --radius-full: 9999px;
 
-  /* Sombras */
-  --shadow-sm:    0 1px 3px rgba(0,0,0,0.4);
-  --shadow-md:    0 4px 16px rgba(0,0,0,0.4);
-  --shadow-lg:    0 8px 32px rgba(0,0,0,0.5);
-  --shadow-cyan:  0 0 24px rgba(0, 200, 232, 0.22);
-  --shadow-amber: 0 0 24px rgba(245, 158, 11, 0.28);
+  /* Sombras — light theme */
+  --shadow-sm:    0 1px 3px rgba(0,0,0,0.07);
+  --shadow-md:    0 4px 16px rgba(0,0,0,0.09);
+  --shadow-lg:    0 8px 32px rgba(0,0,0,0.11);
+  --shadow-cyan:  0 0 24px rgba(37, 99, 235, 0.14);
+  --shadow-amber: 0 0 24px rgba(30, 58, 138, 0.18);
 
   /* Transiciones */
   --transition:      0.25s ease;
@@ -143,7 +143,7 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
 }
 
 section {
-  padding: 4.5rem 0;
+  padding: 3rem 0;
 }
 
 /* ── Texto con gradiente ── */
@@ -155,7 +155,7 @@ section {
 }
 
 .gradient-text-amber {
-  background: var(--gradient-amber);
+  background: var(--gradient-cyan);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -184,13 +184,7 @@ section {
   padding: 0.3rem 0.8rem;
   border: 1px solid var(--cyan-border);
   border-radius: var(--radius-full);
-  background: rgba(0, 200, 232, 0.06);
-}
-
-.section-tag--amber {
-  color: var(--amber);
-  border-color: var(--amber-border);
-  background: rgba(245, 158, 11, 0.06);
+  background: var(--cyan-glow);
 }
 
 .section-header {
@@ -231,13 +225,13 @@ section {
   background: var(--cyan);
   color: var(--bg-primary);
   border-color: var(--cyan);
-  box-shadow: 0 0 18px rgba(0, 200, 232, 0.2);
+  box-shadow: 0 0 18px rgba(37, 99, 235, 0.2);
 }
 
 .btn-primary:hover {
   background: var(--cyan-light);
   border-color: var(--cyan-light);
-  box-shadow: 0 0 32px rgba(0, 200, 232, 0.4);
+  box-shadow: 0 0 32px rgba(37, 99, 235, 0.35);
   transform: scale(1.04);
   color: var(--bg-primary);
 }
@@ -246,18 +240,18 @@ section {
   transform: scale(1);
 }
 
-/* Amber — Asesoramiento Operativo */
+/* Amber → Azul profundo (servicios, contacto) */
 .btn-amber {
   background: var(--amber);
   color: var(--bg-primary);
   border-color: var(--amber);
-  box-shadow: 0 0 18px rgba(245, 158, 11, 0.2);
+  box-shadow: 0 0 18px rgba(30, 58, 138, 0.22);
 }
 
 .btn-amber:hover {
   background: var(--amber-light);
   border-color: var(--amber-light);
-  box-shadow: 0 0 32px rgba(245, 158, 11, 0.4);
+  box-shadow: 0 0 32px rgba(30, 58, 138, 0.35);
   transform: scale(1.04);
   color: var(--bg-primary);
 }
@@ -274,13 +268,32 @@ section {
 }
 
 .btn-outline:hover {
-  border-color: var(--cyan);
-  color: var(--cyan);
-  box-shadow: var(--shadow-cyan);
+  border-color: var(--amber);
+  color: var(--amber);
+  box-shadow: var(--shadow-amber);
   transform: scale(1.04);
 }
 
 .btn-outline:active {
+  transform: scale(1);
+}
+
+/* Outline Cyan — fondo blanco, borde y texto azul primario */
+.btn-outline-cyan {
+  background: #ffffff;
+  color: var(--cyan);
+  border-color: var(--cyan);
+}
+
+.btn-outline-cyan:hover {
+  background: var(--cyan-glow);
+  border-color: var(--cyan-light);
+  color: var(--cyan-light);
+  box-shadow: var(--shadow-cyan);
+  transform: scale(1.04);
+}
+
+.btn-outline-cyan:active {
   transform: scale(1);
 }
 
@@ -329,13 +342,13 @@ section {
 
 /* ── Selección de texto ── */
 ::selection {
-  background: rgba(0, 200, 232, 0.2);
+  background: rgba(37, 99, 235, 0.15);
   color: var(--text-main);
 }
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
-  section { padding: 2.5rem 0; }
+  section { padding: 2rem 0; }
   .section-header { margin-bottom: 1.5rem; }
   .btn-lg { font-size: var(--text-base); padding: 0.875rem 1.5rem; }
 }
@@ -344,4 +357,54 @@ section {
   .container { padding: 0 var(--space-sm); }
   h1 { font-size: 1.85rem; }
   h2 { font-size: 1.6rem; }
+}
+
+/* ── Botón CTA flotante ── */
+.sticky-cta {
+  position: fixed;
+  bottom: 1.75rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  opacity: 0;
+  z-index: 998;
+  pointer-events: none;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.sticky-cta.visible {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sticky-cta .btn {
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.35);
+  padding: 0.8rem 1.75rem;
+  font-size: var(--text-sm);
+}
+
+@media (max-width: 520px) {
+  .sticky-cta { left: 1rem; right: 1rem; transform: translateY(80px); width: calc(100% - 2rem); }
+  .sticky-cta.visible { transform: translateY(0); }
+  .sticky-cta .btn { width: 100%; justify-content: center; }
+}
+
+/* ── Barra de progreso lateral ── */
+.scroll-progress-track {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: rgba(0, 0, 0, 0.06);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.scroll-progress-fill {
+  width: 100%;
+  height: 0%;
+  background: var(--gradient-cyan);
+  border-radius: 0 0 2px 0;
+  transition: height 0.08s linear;
 }

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Novimai — Casos reales de automatización para pequeñas empresas. Ejemplos concretos de lo que puedes dejar de hacer a mano." />
+  <title>Novimai — Ejemplos de automatización para tu negocio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/pymes.css" />
+  <link rel="stylesheet" href="css/expand.css" />
+
+  <style>
+    /* Estilos específicos de la página de ejemplos */
+    .ejemplos-hero {
+      background: var(--bg-secondary);
+      padding: 7rem 0 3.5rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .ejemplos-hero .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: var(--text-sm);
+      font-weight: 600;
+      color: var(--text-subtle);
+      margin-bottom: 1.5rem;
+      transition: color var(--transition);
+    }
+
+    .ejemplos-hero .back-link:hover { color: var(--cyan); }
+    .ejemplos-hero .back-link svg { width: 16px; height: 16px; }
+
+    .ejemplos-hero h1 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      margin-bottom: 1rem;
+    }
+
+    .ejemplos-hero p {
+      font-size: var(--text-lg);
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    .ejemplos-section {
+      padding: 4rem 0;
+    }
+
+    /* Cards de ejemplo en página de ejemplos — siempre abiertas (sin expand) */
+    .ejemplo-card-full {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-lg);
+      transition: all var(--transition);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .ejemplo-card-full:hover {
+      border-color: var(--cyan-border);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+
+    .ejemplo-card-full .example-card-top {
+      justify-content: flex-start;
+      gap: 0.75rem;
+    }
+
+    .ejemplo-card-full h3 {
+      font-size: var(--text-xl);
+      color: var(--text-main);
+    }
+
+    .ejemplo-card-full p {
+      color: var(--text-muted);
+      font-size: var(--text-base);
+      line-height: 1.7;
+    }
+
+    .ejemplo-usecase {
+      background: var(--bg-secondary);
+      border-radius: var(--radius-md);
+      padding: 0.875rem 1rem;
+      font-size: var(--text-sm);
+    }
+
+    .ejemplo-usecase strong {
+      color: var(--text-main);
+      display: block;
+      margin-bottom: 0.25rem;
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-subtle);
+    }
+
+    .ejemplo-usecase p {
+      color: var(--text-muted);
+      margin: 0;
+      font-size: var(--text-sm);
+    }
+
+    .ejemplos-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .ejemplos-cta {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border);
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    .ejemplos-cta h2 {
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      margin-bottom: 1rem;
+    }
+
+    .ejemplos-cta p {
+      font-size: var(--text-lg);
+      max-width: 500px;
+      margin: 0 auto 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .ejemplos-grid { grid-template-columns: 1fr; }
+      .ejemplos-hero { padding: 6rem 0 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bubbles-container" aria-hidden="true">
+    <span class="bubble bubble--1"></span>
+    <span class="bubble bubble--2"></span>
+    <span class="bubble bubble--3"></span>
+    <span class="bubble bubble--4"></span>
+  </div>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-novi">Novi</span><span class="logo-mai">mai</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#problema">El problema</a></li>
+        <li><a href="index.html#como-funciona">Cómo funciona</a></li>
+        <li><a href="ejemplos.html" class="active">Ejemplos</a></li>
+      </ul>
+
+      <a href="index.html#contacto" class="btn btn-primary btn-nav">Agenda tu llamada</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+      <ul>
+        <li><a href="index.html#problema">El problema</a></li>
+        <li><a href="index.html#como-funciona">Cómo funciona</a></li>
+        <li><a href="ejemplos.html">Ejemplos</a></li>
+      </ul>
+      <a href="index.html#contacto" class="btn btn-primary">Agenda tu llamada gratuita</a>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO DE LA PÁGINA ==================== -->
+  <div class="ejemplos-hero">
+    <div class="container">
+      <a href="index.html" class="back-link">
+        <i data-lucide="arrow-left"></i> Volver a inicio
+      </a>
+      <span class="section-tag">Casos reales</span>
+      <h1>¿Qué puedes <span class="gradient-text">dejar de hacer a mano</span>?</h1>
+      <p>Estos son los procesos que automatizamos en negocios como el tuyo. Sin tecnicismos, con ejemplos concretos.</p>
+    </div>
+  </div>
+
+  <!-- ==================== EJEMPLOS ==================== -->
+  <section class="ejemplos-section">
+    <div class="container">
+      <div class="ejemplos-grid">
+
+        <!-- 1. WhatsApp / Citas -->
+        <div class="ejemplo-card-full reveal">
+          <div class="example-mockup">
+            <div class="mockup-phone">
+              <div class="mockup-phone-bar"></div>
+              <div class="mockup-msg mockup-msg--in">Hola, ¿tenéis hueco el martes?</div>
+              <div class="mockup-msg mockup-msg--out">¡Claro! Te hemos reservado el martes a las 11h. Te llegará confirmación al móvil.</div>
+              <div class="mockup-msg mockup-msg--in">¡Perfecto, gracias!</div>
+            </div>
+          </div>
+          <div class="example-card-top">
+            <div class="example-icon"><i data-lucide="message-square"></i></div>
+            <span class="example-tag">WhatsApp · Citas</span>
+          </div>
+          <h3>Respuestas y citas automáticas por WhatsApp</h3>
+          <p>Tu negocio responde y agenda citas por WhatsApp solo, aunque sean las 11 de la noche. Sin que tengas que estar pendiente del móvil.</p>
+          <div class="ejemplo-usecase">
+            <strong>¿Para quién es esto?</strong>
+            <p>Peluquerías, clínicas, centros de estética, fisioterapeutas, academias, cualquier negocio con cita previa.</p>
+          </div>
+        </div>
+
+        <!-- 2. Informes automáticos -->
+        <div class="ejemplo-card-full reveal">
+          <div class="example-mockup">
+            <div class="mockup-screen">
+              <div class="mockup-screen-bar">
+                <span class="mockup-dot"></span>
+                <span class="mockup-bar-text">Informe semanal — generado automáticamente</span>
+              </div>
+              <div class="mockup-row mockup-row--accent"></div>
+              <div class="mockup-row" style="width: 85%"></div>
+              <div class="mockup-row" style="width: 70%"></div>
+              <div class="mockup-row mockup-row--accent" style="width: 55%"></div>
+              <div class="mockup-row" style="width: 40%"></div>
+            </div>
+          </div>
+          <div class="example-card-top">
+            <div class="example-icon"><i data-lucide="bar-chart-2"></i></div>
+            <span class="example-tag">Informes · Productividad</span>
+          </div>
+          <h3>Informes semanales que se generan solos</h3>
+          <p>Cada semana recibes un resumen de tu negocio: ventas, citas, clientes nuevos, tareas pendientes. Sin tocar una hoja de Excel ni un solo dato.</p>
+          <div class="ejemplo-usecase">
+            <strong>¿Para quién es esto?</strong>
+            <p>Cualquier negocio que ahora hace el seguimiento de resultados a mano: gestorías, talleres, tiendas, hostelería.</p>
+          </div>
+        </div>
+
+        <!-- 3. Seguimiento de clientes -->
+        <div class="ejemplo-card-full reveal">
+          <div class="example-mockup">
+            <div class="mockup-pipeline">
+              <div class="mockup-lead mockup-lead--new">
+                <i data-lucide="user-plus" width="12" height="12"></i>
+                <span>Nuevo contacto → clasificado → en seguimiento</span>
+              </div>
+              <div class="mockup-lead-arrow">↓</div>
+              <div class="mockup-lead mockup-lead--done">
+                <i data-lucide="check" width="12" height="12"></i>
+                <span>Email de bienvenida enviado automáticamente</span>
+              </div>
+            </div>
+          </div>
+          <div class="example-card-top">
+            <div class="example-icon"><i data-lucide="users"></i></div>
+            <span class="example-tag">Clientes · Ventas</span>
+          </div>
+          <h3>Seguimiento de clientes sin esfuerzo</h3>
+          <p>Cada contacto nuevo recibe atención inmediata y se clasifica solo. El sistema hace el seguimiento por ti sin que tengas que acordarte de llamar o escribir.</p>
+          <div class="ejemplo-usecase">
+            <strong>¿Para quién es esto?</strong>
+            <p>Inmobiliarias, academias, negocios con proceso de captación, cualquier empresa que gestione leads o presupuestos.</p>
+          </div>
+        </div>
+
+        <!-- 4. Dashboard en tiempo real -->
+        <div class="ejemplo-card-full reveal">
+          <div class="example-mockup">
+            <div class="mockup-screen">
+              <div class="mockup-screen-bar">
+                <span class="mockup-dot mockup-dot--green"></span>
+                <span class="mockup-bar-text">Dashboard en tiempo real</span>
+              </div>
+              <div class="mockup-row mockup-row--accent"></div>
+              <div class="mockup-row" style="width: 90%"></div>
+              <div class="mockup-row" style="width: 60%"></div>
+              <div class="mockup-row mockup-row--accent" style="width: 75%"></div>
+            </div>
+          </div>
+          <div class="example-card-top">
+            <div class="example-icon"><i data-lucide="trending-up"></i></div>
+            <span class="example-tag">Análisis · Decisiones</span>
+          </div>
+          <h3>Panel de control de tu negocio en tiempo real</h3>
+          <p>Un panel que se actualiza solo con las métricas que importan: ventas, citas, ingresos, ocupación. Siempre disponible desde el móvil, sin fórmulas de Excel.</p>
+          <div class="ejemplo-usecase">
+            <strong>¿Para quién es esto?</strong>
+            <p>Dueños y gestores que quieren saber de un vistazo cómo va el negocio sin depender de que alguien les pase un Excel.</p>
+          </div>
+        </div>
+
+        <!-- 5. Chatbot para la web -->
+        <div class="ejemplo-card-full reveal">
+          <div class="example-mockup">
+            <div class="mockup-phone">
+              <div class="mockup-phone-bar"></div>
+              <div class="mockup-msg mockup-msg--bot">Hola, soy el asistente de [Tu negocio]. ¿En qué te puedo ayudar?</div>
+              <div class="mockup-msg mockup-msg--in">¿Cuánto cuesta un corte?</div>
+              <div class="mockup-msg mockup-msg--bot">Un corte de pelo desde 18€. ¿Quieres reservar cita?</div>
+            </div>
+          </div>
+          <div class="example-card-top">
+            <div class="example-icon"><i data-lucide="bot"></i></div>
+            <span class="example-tag">Chatbot · Web</span>
+          </div>
+          <h3>Asistente virtual en tu web</h3>
+          <p>Responde las dudas de tus clientes y agenda citas 24/7, sin que tengas que estar pendiente. Como tener una recepcionista que nunca descansa.</p>
+          <div class="ejemplo-usecase">
+            <strong>¿Para quién es esto?</strong>
+            <p>Negocios con web propia que reciben muchas consultas repetitivas: precios, horarios, disponibilidad, servicios.</p>
+          </div>
+        </div>
+
+        <!-- 6. Agenda automática -->
+        <div class="ejemplo-card-full reveal">
+          <div class="example-mockup">
+            <div class="mockup-calendar">
+              <div class="mockup-cal-header">
+                <i data-lucide="calendar" width="12" height="12"></i>
+                <span>Agenda sincronizada</span>
+              </div>
+              <div class="mockup-cal-event mockup-cal-event--cyan">10:00 — María García ✓ confirmada</div>
+              <div class="mockup-cal-event">11:30 — Pedro López ✓ recordatorio enviado</div>
+              <div class="mockup-cal-event mockup-cal-event--cyan">16:00 — Ana Martín ✓ confirmada</div>
+            </div>
+          </div>
+          <div class="example-card-top">
+            <div class="example-icon"><i data-lucide="calendar-check"></i></div>
+            <span class="example-tag">Agenda · Recordatorios</span>
+          </div>
+          <h3>Agenda que se gestiona sola</h3>
+          <p>Recordatorios automáticos por WhatsApp o SMS, confirmaciones sin llamar y calendario siempre sincronizado. Adiós a las citas olvidadas y a los no-shows.</p>
+          <div class="ejemplo-usecase">
+            <strong>¿Para quién es esto?</strong>
+            <p>Clínicas, peluquerías, centros de fisioterapia, dentistas, cualquier negocio donde las citas no presentadas son un problema.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA FINAL ==================== -->
+  <div class="ejemplos-cta">
+    <div class="container">
+      <span class="section-tag section-tag--amber">¿Ves algo que te encaje?</span>
+      <h2>Agenda tu llamada <span class="gradient-text-amber">gratuita</span></h2>
+      <p>30 minutos sin compromiso para ver qué de todo esto aplica a tu negocio concreto.</p>
+      <a href="index.html#contacto" class="btn btn-amber btn-lg">
+        Quiero mi llamada gratuita <span class="btn-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <span class="logo-novi">Novi</span><span class="logo-mai">mai</span>
+          </a>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Navegación</h4>
+            <ul>
+              <li><a href="index.html#problema">El problema</a></li>
+              <li><a href="index.html#como-funciona">Cómo funciona</a></li>
+              <li><a href="ejemplos.html">Ejemplos</a></li>
+              <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Política de privacidad</a></li>
+              <li><a href="#">Aviso legal</a></li>
+              <li><a href="#">Cookies</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Novimai. Todos los derechos reservados.</p>
+        <p>Hecho con cariño para que tu empresa crezca</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

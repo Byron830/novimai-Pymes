@@ -130,4 +130,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', updateActiveLink, { passive: true });
 
+  // ── Barra de progreso lateral ──
+  const progressFill = document.getElementById('scroll-progress-fill');
+
+  function updateScrollProgress() {
+    const scrollTop  = window.scrollY;
+    const docHeight  = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressFill.style.height = pct + '%';
+  }
+
+  window.addEventListener('scroll', updateScrollProgress, { passive: true });
+  updateScrollProgress();
+
+  // ── Cards expandibles (Leer más / Cerrar) ──
+  document.querySelectorAll('.card-exp-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const card  = btn.closest('.card-exp');
+      const body  = card.querySelector('.card-exp-body');
+      const label = btn.querySelector('.card-exp-label');
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      btn.setAttribute('aria-expanded', String(!isOpen));
+      body.hidden = isOpen;
+      label.textContent = isOpen ? 'Leer más' : 'Cerrar';
+      card.classList.toggle('card-exp--open', !isOpen);
+
+      // Re-inicializar iconos Lucide dentro del body si los hay
+      if (!isOpen && typeof lucide !== 'undefined') {
+        lucide.createIcons({ nodes: [body] });
+      }
+    });
+  });
+
+  // Click en el header también abre/cierra
+  document.querySelectorAll('.card-exp-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const btn = header.querySelector('.card-exp-btn');
+      if (btn) btn.click();
+    });
+  });
+
 });

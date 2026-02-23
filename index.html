@@ -41,6 +41,7 @@
   <link rel="stylesheet" href="css/pymes.css" />
   <link rel="stylesheet" href="css/expand.css" />
   <link rel="stylesheet" href="css/cookies.css" />
+  <link rel="stylesheet" href="css/chat-widget.css" />
 
   <!-- Schema JSON-LD -->
   <script type="application/ld+json">
@@ -782,10 +783,52 @@
     </div>
   </div>
 
+  <!-- ==================== CHAT WIDGET ==================== -->
+  <div id="chat-widget" class="chat-widget">
+
+    <div id="chat-panel" class="chat-panel" hidden>
+      <div class="chat-header">
+        <div class="chat-header-avatar">
+          <i data-lucide="bot"></i>
+        </div>
+        <div class="chat-header-info">
+          <span class="chat-header-name">Asistente Novimai</span>
+          <span class="chat-header-status">En línea</span>
+        </div>
+        <button class="chat-close-btn" id="chat-close" aria-label="Cerrar chat">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <div id="chat-messages" class="chat-messages"></div>
+
+      <div class="chat-input-area">
+        <input
+          type="text"
+          id="chat-input"
+          class="chat-input"
+          placeholder="Escribe tu pregunta..."
+          maxlength="500"
+          autocomplete="off"
+        />
+        <button id="chat-send" class="chat-send-btn" aria-label="Enviar mensaje">
+          <i data-lucide="send"></i>
+        </button>
+      </div>
+    </div>
+
+    <button id="chat-toggle" class="chat-toggle" aria-label="Abrir chat de ayuda">
+      <i data-lucide="message-circle" class="chat-icon-open"></i>
+      <i data-lucide="x" class="chat-icon-close" style="display:none"></i>
+    </button>
+
+  </div>
+
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/main.js"></script>
   <script src="js/form.js"></script>
   <script src="js/cookies.js"></script>
+  <script src="js/chat-widget.js"></script>
 </body>
 </html>

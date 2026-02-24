@@ -198,7 +198,8 @@ section {
 }
 
 .section-header p {
-  font-size: var(--text-lg);
+  font-size: var(--text-xl);
+  font-weight: 500;
 }
 
 /* ── Botones ── */

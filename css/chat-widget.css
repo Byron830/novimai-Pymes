@@ -21,7 +21,7 @@
   align-items: center;
   gap: 0.5rem;
   background: #ffffff;
-  color: var(--text-main);
+  color: #2563eb;
   font-size: var(--text-sm);
   font-weight: 600;
   padding: 0.55rem 0.9rem;
@@ -71,8 +71,8 @@
 
 /* ── Botón flotante ── */
 .chat-toggle {
-  width: 56px;
-  height: 56px;
+  width: 66px;
+  height: 66px;
   border-radius: var(--radius-full);
   background: var(--gradient-cyan);
   border: none;
@@ -117,8 +117,8 @@
 
 /* ── Panel de chat ── */
 .chat-panel {
-  width: 340px;
-  max-height: 480px;
+  width: 370px;
+  max-height: 530px;
   background: var(--bg-primary);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-lg), 0 0 0 1px var(--border);
@@ -271,7 +271,8 @@
 
 /* Enlaces dentro de burbujas del bot */
 .chat-msg--bot .chat-bubble a {
-  color: var(--cyan);
+  color: #2563eb;
+  font-weight: 600;
   text-decoration: underline;
   word-break: break-all;
 }

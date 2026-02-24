@@ -63,10 +63,27 @@
       .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;');
-    bubble.innerHTML = safe.replace(
-      /(https?:\/\/[^\s]+)/g,
-      '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
-    );
+    // Detecta URLs con o sin protocolo (el bot a veces escribe "novimai.com/..." sin https://)
+    bubble.innerHTML = safe.replace(/(https?:\/\/[^\s]+|(?:www\.)?novimai\.com[^\s]*)/g, (match) => {
+      const url = match.replace(/[.,;!?)'">\]]+$/, '');
+      const href = /^https?:\/\//.test(url) ? url : `https://${url}`;
+      return `<a href="${href}" target="_blank" rel="noopener noreferrer">${url}</a>`;
+    });
+    // Los enlaces a anclas del mismo sitio (#contacto, etc.) hacen scroll suave sin abrir nueva pestaña
+    bubble.querySelectorAll('a').forEach(link => {
+      const hash = link.getAttribute('href').match(/novimai\.com\/(#[^\s?]+)/);
+      if (hash) {
+        const anchor = hash[1];
+        link.setAttribute('href', anchor);
+        link.removeAttribute('target');
+        link.removeAttribute('rel');
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const target = document.querySelector(anchor);
+          if (target) target.scrollIntoView({ behavior: 'smooth' });
+        });
+      }
+    });
 
     wrapper.appendChild(bubble);
     messages.appendChild(wrapper);

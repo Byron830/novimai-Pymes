@@ -201,7 +201,13 @@
 @media (max-width: 768px) {
   .nav-links, .btn-nav { display: none; }
   .hamburger { display: flex; }
-  .btn-nav-mobile { display: inline-flex; }
+  .nav-logo { font-size: 1.1rem; }
+  .nav-logo img { height: 26px; }
+  /* Logo a la izquierda, botón + hamburger a la derecha */
+  .btn-nav-mobile {
+    display: inline-flex;
+    margin-left: auto;
+  }
 }
 
 @media (max-width: 360px) {

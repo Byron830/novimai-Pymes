@@ -9,7 +9,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 10001; /* por encima del chat widget (9999) */
   background: #ffffff;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 -4px 32px rgba(0, 0, 0, 0.1);

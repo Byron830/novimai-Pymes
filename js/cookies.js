@@ -34,12 +34,38 @@
     hideBanner();
   }
 
+  /* ── Eleva/baja el chat widget respecto al banner ── */
+  function liftChatWidget(banner) {
+    var widget = document.getElementById('chat-widget');
+    if (!widget) return;
+    function update() {
+      widget.style.bottom = (banner.offsetHeight + 16) + 'px';
+    }
+    update();
+    // Observa cambios de altura (p.ej. al abrir el panel de configuración)
+    if (window.ResizeObserver) {
+      var obs = new ResizeObserver(update);
+      obs.observe(banner);
+      banner._widgetObserver = obs;
+    }
+  }
+
+  function resetChatWidget(banner) {
+    if (banner && banner._widgetObserver) {
+      banner._widgetObserver.disconnect();
+      delete banner._widgetObserver;
+    }
+    var widget = document.getElementById('chat-widget');
+    if (widget) widget.style.bottom = '';
+  }
+
   /* ── Muestra/oculta el banner ── */
   function showBanner() {
     var banner = document.getElementById('cookie-banner');
     if (banner) {
       setTimeout(function () {
         banner.classList.add('cookie-banner--visible');
+        liftChatWidget(banner);
       }, 600); // pequeño delay para no interrumpir la carga
     }
   }
@@ -47,6 +73,7 @@
   function hideBanner() {
     var banner = document.getElementById('cookie-banner');
     if (banner) {
+      resetChatWidget(banner);
       banner.classList.remove('cookie-banner--visible');
       banner.classList.add('cookie-banner--hidden');
     }

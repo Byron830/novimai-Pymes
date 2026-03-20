@@ -961,9 +961,108 @@
 
 .contact-wrapper {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1fr 1.5fr;
   gap: var(--space-2xl);
+  align-items: start;
+}
+
+/* Card CTA Calendly */
+.contact-cta-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  display: flex;
   align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 24px rgba(37,99,235,0.08);
+}
+
+.contact-cta-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-md);
+  width: 100%;
+}
+
+.contact-cta-icon {
+  width: 64px;
+  height: 64px;
+  background: #eff6ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-cta-icon svg {
+  width: 32px;
+  height: 32px;
+  color: var(--blue);
+}
+
+.contact-cta-inner h3 {
+  font-size: var(--text-xl);
+  font-weight: 800;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.contact-cta-inner p {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.contact-cta-btn {
+  gap: 0.5rem;
+  margin-top: var(--space-sm);
+}
+
+.contact-cta-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.contact-cta-badges {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: var(--space-xs);
+}
+
+.contact-cta-badges span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--blue);
+  background: #eff6ff;
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+}
+
+.contact-cta-badges span svg {
+  width: 13px;
+  height: 13px;
+}
+
+/* Bloque de email secundario */
+.contact-email-block {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--border);
+}
+
+.contact-email-label {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin-bottom: var(--space-xs);
 }
 
 /* Formulario */
@@ -1120,7 +1219,8 @@
 
 @media (max-width: 580px) {
   .form-row { grid-template-columns: 1fr; }
-  .contact-form { padding: var(--space-md); }
+  .contact-cta-card { padding: var(--space-xl); }
+  .contact-cta-badges { gap: 0.4rem; }
 }
 
 /* ══════════════════════════════

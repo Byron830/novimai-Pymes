@@ -138,7 +138,7 @@
 
     } catch (err) {
       hideTyping();
-      appendMessage('En este momento no puedo responder. Escríbenos directamente a info@novimai.com', 'error');
+      appendMessage('En este momento no puedo responder. Escríbenos directamente a julio@novimai.com', 'error');
     } finally {
       isWaiting = false;
       sendBtn.disabled = false;

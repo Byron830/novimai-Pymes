@@ -79,15 +79,24 @@
     }
   }
 
-  /* ── Comprueba si ya hay decisión guardada ── */
+  /* ── Comprueba si ya hay decisión guardada y si sigue vigente (máx. 12 meses) ── */
+  var CONSENT_MAX_AGE_MS = 365 * 24 * 60 * 60 * 1000; // 12 meses en milisegundos
   var saved = null;
   try {
     var raw = localStorage.getItem(STORAGE_KEY);
-    if (raw) saved = JSON.parse(raw);
+    if (raw) {
+      var parsed = JSON.parse(raw);
+      var ts = parsed.timestamp || 0;
+      if (Date.now() - ts < CONSENT_MAX_AGE_MS) {
+        saved = parsed; // consentimiento vigente
+      } else {
+        localStorage.removeItem(STORAGE_KEY); // caducado — mostrar banner de nuevo
+      }
+    }
   } catch (e) {}
 
   if (saved !== null) {
-    // Ya decidió antes — aplicar sin mostrar banner
+    // Ya decidió antes y sigue vigente — aplicar sin mostrar banner
     document.addEventListener('DOMContentLoaded', function () {
       applyConsent(saved);
     });
@@ -107,7 +116,7 @@
     /* Aceptar todo */
     if (acceptBtn) {
       acceptBtn.addEventListener('click', function () {
-        var prefs = { analytics: true };
+        var prefs = { analytics: true, timestamp: Date.now() };
         try { localStorage.setItem(STORAGE_KEY, JSON.stringify(prefs)); } catch (e) {}
         applyConsent(prefs);
       });
@@ -116,7 +125,7 @@
     /* Rechazar todas (excepto técnicas) */
     if (rejectBtn) {
       rejectBtn.addEventListener('click', function () {
-        var prefs = { analytics: false };
+        var prefs = { analytics: false, timestamp: Date.now() };
         try { localStorage.setItem(STORAGE_KEY, JSON.stringify(prefs)); } catch (e) {}
         applyConsent(prefs);
       });
@@ -140,7 +149,7 @@
     if (saveBtn) {
       saveBtn.addEventListener('click', function () {
         var analyticsToggle = document.getElementById('analytics-toggle');
-        var prefs = { analytics: analyticsToggle ? analyticsToggle.checked : false };
+        var prefs = { analytics: analyticsToggle ? analyticsToggle.checked : false, timestamp: Date.now() };
         try { localStorage.setItem(STORAGE_KEY, JSON.stringify(prefs)); } catch (e) {}
         applyConsent(prefs);
       });

@@ -10,12 +10,10 @@
   <link rel="canonical" href="https://www.novimai.com/politica-privacidad.html" />
 
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "Organization", "name": "Novimai", "url": "https://www.novimai.com", "email": "info@novimai.com"}
+  {"@context": "https://schema.org", "@type": "Organization", "name": "Novimai", "url": "https://www.novimai.com", "email": "julio@novimai.com"}
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/quicksand.css" />
 
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/components.css" />
@@ -254,7 +252,7 @@
             <p><strong>Titular:</strong> Julio Hidalgo León</p>
             <p><strong>NIF:</strong> 77966935V</p>
             <p><strong>Domicilio:</strong> Calle Recogidas 48, España</p>
-            <p><strong>Email:</strong> <a href="mailto:info@novimai.com" class="legal-contact-link">info@novimai.com</a></p>
+            <p><strong>Email:</strong> <a href="mailto:julio@novimai.com" class="legal-contact-link">julio@novimai.com</a></p>
           </div>
         </div>
 
@@ -271,6 +269,13 @@
             <li>Sector de actividad</li>
             <li>Información facilitada voluntariamente sobre procesos o tareas que consumen tiempo en la empresa</li>
           </ul>
+          <p style="margin-top: 0.75rem;">
+            A través del <strong>asistente de chat</strong> disponible en la web, se pueden recoger los mensajes
+            que el usuario escribe voluntariamente en la conversación, junto con un identificador de sesión
+            temporal generado de forma aleatoria (almacenado en sessionStorage del navegador y eliminado
+            automáticamente al cerrar la pestaña). Estos datos se transmiten al sistema propio de Novimai
+            para generar la respuesta y no se conservan una vez atendida la consulta.
+          </p>
           <p style="margin-top: 0.75rem;">No se recogen datos especialmente protegidos.</p>
         </div>
 
@@ -316,17 +321,23 @@
             </div>
             <div class="legal-provider-item">
               <span class="legal-provider-name">Google Analytics</span>
-              <span>– Análisis estadístico del uso de la web.</span>
+              <span>– Análisis estadístico del uso de la web (solo si el usuario acepta cookies analíticas).</span>
             </div>
             <div class="legal-provider-item">
               <span class="legal-provider-name">Calendly</span>
               <span>– Gestión de agenda y programación de reuniones (en caso de utilizarse).</span>
             </div>
+            <div class="legal-provider-item">
+              <span class="legal-provider-name">Sistema propio de automatización (n8n, alojado en servidor propio)</span>
+              <span>– Procesamiento de mensajes del asistente de chat y automatización de flujos internos. Los datos no salen del servidor propio de Novimai.</span>
+            </div>
           </div>
           <p style="margin-top: 1rem;">
-            Estos proveedores pueden implicar transferencias internacionales de datos a Estados Unidos,
-            realizadas bajo las garantías adecuadas conforme al RGPD (Cláusulas Contractuales Tipo o
-            adhesión al Marco de Privacidad UE-EEUU cuando aplique).
+            Los proveedores Google y Calendly pueden implicar transferencias internacionales de datos a
+            Estados Unidos, realizadas al amparo del <strong>Acuerdo Marco UE-EE.UU. de Privacidad de
+            Datos (EU-US Data Privacy Framework)</strong>, en vigor desde julio de 2023, al estar dichos
+            proveedores certificados en dicho marco. Para más información:
+            <a href="https://www.dataprivacyframework.gov" target="_blank" rel="noopener">dataprivacyframework.gov</a>.
           </p>
           <p>No se cederán datos a terceros salvo obligación legal.</p>
         </div>
@@ -362,7 +373,7 @@
             Para ejercerlos, deberá enviar solicitud junto con copia de documento identificativo a:
           </p>
           <div class="legal-info-box">
-            <p><a href="mailto:info@novimai.com" class="legal-contact-link">📩 info@novimai.com</a></p>
+            <p><a href="mailto:julio@novimai.com" class="legal-contact-link">📩 julio@novimai.com</a></p>
           </div>
           <p style="margin-top: 0.75rem;">
             También tiene derecho a presentar reclamación ante la Agencia Española de Protección de
@@ -468,7 +479,7 @@
     </div>
   </div>
 
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="js/lucide.min.js"></script>
   <script>lucide.createIcons();</script>
   <script src="js/cookies.js"></script>
 </body>

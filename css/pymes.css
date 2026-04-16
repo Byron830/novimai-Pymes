@@ -543,6 +543,23 @@
   .hero-image-wrap img {
     height: 200px;
   }
+
+  /* Filosofía — imagen compacta en móvil pequeño */
+  .philosophy-image-wrap img {
+    min-height: 200px;
+    height: 220px;
+  }
+
+  /* Pain transition centrada y sin overflow */
+  .pain-transition {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .pain-transition p {
+    white-space: normal;
+    text-align: center;
+    font-size: 1rem;
+  }
 }
 
 /* ==================== FAQ SEO ==================== */

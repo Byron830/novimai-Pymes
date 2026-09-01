@@ -1,7 +1,37 @@
+# robots.txt — Novimai
+# Política: acceso permitido a todos los crawlers de búsqueda y de asistentes de IA
+# (para poder aparecer en respuestas de ChatGPT, Perplexity, Claude, Google AI, etc.).
+# Solo se restringe la indexación de las páginas legales (contienen datos personales/fiscales).
+
 User-agent: *
 Allow: /
 Disallow: /aviso-legal.html
 Disallow: /politica-privacidad.html
 Disallow: /politica-cookies.html
 
-Sitemap: https://www.novimai.com/sitemap.xml
+# Crawlers de búsqueda / asistentes de IA — acceso explícito permitido
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+Sitemap: https://novimai.com/sitemap.xml
